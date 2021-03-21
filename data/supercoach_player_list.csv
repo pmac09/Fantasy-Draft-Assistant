@@ -1,0 +1,784 @@
+"player_id","supercoach_id","first_name","last_name","team","pos","average","price"
+290528,448,"Max","Gawn","MEL","RUC",139.86,751400
+293535,74,"Lachie","Neale","BRL","MID",134.35,721800
+296205,642,"Jack","Steele","STK","MID",122.47,658000
+996701,466,"Clayton","Oliver","MEL","MID",122.24,656700
+295342,666,"Jake","Lloyd","SYD","DEF",122.18,656400
+295467,711,"Jack","Macrae","WBD","MID",121,650100
+293957,144,"Brodie","Grundy","COL","RUC",120.65,648200
+298210,467,"Christian","Petracca","MEL","MID",117.53,631400
+297373,689,"Marcus","Bontempelli","WBD","MID",116.12,623900
+992016,200,"Zach","Merrett","ESS","MID",115.56,620900
+294557,704,"Lachie","Hunter","WBD","MID",115.11,618500
+296347,377,"Josh","Kelly","GWS","MID",114.57,615600
+270917,317,"Patrick","Dangerfield","GEE","FWD MID",113.88,611900
+291856,421,"Tom","Mitchell","HAW","MID",113.53,610000
+291570,231,"Nat","Fyfe","FRE","MID",113.21,608300
+293716,65,"Jarryd","Lyons","BRL","MID",112.53,604600
+271129,492,"Todd","Goldstein","NTH","RUC",112,601700
+297401,6,"Matt","Crouch","ADE","MID",110.69,594700
+271045,753,"Nic","Naitanui","WCE","RUC",110.5,593700
+260257,162,"Scott","Pendlebury","COL","MID",110.23,592200
+250365,525,"Travis","Boak","PTA","MID",109.88,590400
+291776,131,"Taylor","Adams","COL","MID",109.59,588800
+280965,168,"Steele","Sidebottom","COL","FWD MID",109.44,588000
+291790,721,"Adam","Treloar","WBD","MID",109.38,587600
+294199,333,"Sam","Menegola","GEE","MID",107.76,579000
+998659,243,"Luke","Ryan","FRE","DEF",107.29,576500
+270919,558,"Tom","Rockliff","PTA","MID",106.64,573000
+290778,677,"Luke","Parker","SYD","MID",106.29,571100
+297523,30,"Reilly","O'Brien","ADE","RUC",106.24,570800
+290801,743,"Andrew","Gaff","WCE","MID",106.24,570800
+290799,709,"Tom","Liberatore","WBD","MID",106.07,569900
+298272,290,"Touk","Miller","GCS","MID",105.94,569200
+261510,324,"Tom","Hawkins","GEE","FWD",105.82,568600
+281091,278,"Hugh","Greenwood","GCS","MID",105.59,567300
+293222,20,"Rory","Laird","ADE","DEF MID",105.12,564800
+291861,480,"Jed","Anderson","NTH","MID",104.67,562300
+294305,395,"Lachie","Whitfield","GWS","DEF",104.53,561600
+294318,562,"Ollie","Wines","PTA","MID",104.33,560600
+993834,697,"Josh","Dunkley","WBD","FWD MID",104.27,560200
+992468,632,"Rowan","Marshall","STK","RUC FWD",103.71,557200
+281065,319,"Mitch","Duncan","GEE","MID",103.63,556700
+290550,322,"Cameron","Guthrie","GEE","MID",103.24,554700
+297566,436,"James","Sicily","HAW","DEF",102.91,552900
+280317,345,"Rhys","Stanley","GEE","RUC",102.71,551900
+1004592,699,"Tim","English","WBD","RUC",102.59,551200
+992010,153,"Brayden","Maynard","COL","DEF",102.35,549900
+291783,208,"Dylan","Shiel","ESS","MID",102,548000
+1001026,207,"Jordan","Ridley","ESS","DEF",101.94,547700
+1000978,69,"Hugh","McCluggage","BRL","MID",101.53,545500
+295136,696,"Caleb","Daniel","WBD","DEF",101.53,545500
+993905,672,"Callum","Mills","SYD","DEF",101.4,544800
+1002232,221,"Andrew","Brayshaw","FRE","MID",101.29,544200
+296035,489,"Trent","Dumont","NTH","MID",101.24,543900
+1006094,127,"Sam","Walsh","CAR","MID",101.12,543300
+290847,586,"Dustin","Martin","RIC","FWD MID",100.81,541600
+291800,348,"Tom","Stewart","GEE","DEF",100.14,538000
+291902,478,"Jack","Viney","MEL","MID",99.56,534900
+293871,138,"Jack","Crisp","COL","DEF",99.24,533200
+296733,310,"Mark","Blicavs","GEE","DEF MID",98.94,531600
+281007,254,"Michael","Walters","FRE","FWD MID",98.86,531100
+291969,359,"Stephen","Coniglio","GWS","MID",98.44,528900
+295265,369,"Nick","Haynes","GWS","DEF",98.35,528400
+295461,123,"Adam","Saad","CAR","DEF",97.94,526200
+261224,88,"Dayne","Zorko","BRL","FWD MID",97.87,525800
+990704,93,"Patrick","Cripps","CAR","MID",97.47,523700
+998133,51,"Jarrod","Berry","BRL","MID",97.07,521500
+290746,550,"Scott","Lycett","PTA","RUC",96.92,520700
+992049,601,"Jayden","Short","RIC","DEF",96.65,519300
+291313,147,"Jeremy","Howe","COL","DEF",120.5,517900
+295898,749,"Tim","Kelly","WCE","MID",96.29,517400
+296351,607,"Jack","Billings","STK","MID",95.82,514800
+260382,664,"Josh P.","Kennedy","SYD","MID",95.58,513500
+296355,498,"Luke","McDonald","NTH","DEF",95.47,512900
+270146,96,"Ed","Curnow","CAR","MID",95.41,512600
+260227,327,"Shaun","Higgins","GEE","MID",95,510400
+998102,198,"Andrew","McGrath","ESS","MID",94.93,510000
+280078,763,"Luke","Shuey","WCE","MID",94.67,508600
+281085,461,"Steven","May","MEL","DEF",94.53,507900
+250267,640,"Paddy","Ryder","STK","RUC",94.15,505900
+998205,382,"Harry","Perryman","GWS","MID",94,505000
+240052,240,"David","Mundy","FRE","MID",93.44,502000
+291975,307,"Jarrod","Witts","GCS","RUC",93.35,501600
+993998,507,"Jy","Simpkin","NTH","MID",93,499700
+280711,532,"Charlie","Dixon","PTA","FWD",92.81,498700
+295518,98,"Sam","Docherty","CAR","DEF",92.31,496000
+1009208,298,"Matt","Rowell","GCS","MID",102.4,495100
+991988,626,"Zak","Jones","STK","MID",92.07,494700
+1006130,718,"Bailey","Smith","WBD","MID",92.06,494600
+281080,762,"Brad","Sheppard","WCE","DEF",91.71,492700
+290307,678,"Dane","Rampe","SYD","DEF",91.64,492300
+261396,541,"Robbie","Gray","PTA","FWD",91.41,491100
+994295,544,"Dan","Houston","PTA","DEF",91.07,489300
+993903,373,"Jacob","Hopper","GWS","MID",90.94,488600
+294613,427,"Jaeger","O'Meara","HAW","MID",90.83,488000
+298264,457,"Ed","Langdon","MEL","MID",90.71,487300
+1002239,222,"Adam","Cerra","FRE","MID",90.24,484800
+294674,604,"Nick","Vlastuin","RIC","DEF",90,483500
+271072,78,"Daniel","Rich","BRL","DEF",89.92,483100
+292128,771,"Elliot","Yeo","WCE","MID",89.9,483000
+998215,124,"Will","Setterfield","CAR","MID",89.69,481900
+296296,761,"Dom","Sheed","WCE","MID",89.06,478500
+290738,504,"Jared","Polec","NTH","MID",88.92,477800
+240283,744,"Shannon","Hurn","WCE","DEF",88.94,477800
+1002222,438,"James","Worpel","HAW","MID",88.27,474200
+270963,37,"Rory","Sloane","ADE","MID",87.83,471900
+1006121,529,"Zak","Butters","PTA","FWD",87.73,471400
+996059,47,"Harris","Andrews","BRL","DEF",87.43,469700
+296359,472,"Christian","Salem","MEL","DEF",87.31,469100
+993817,202,"Darcy","Parish","ESS","MID",86.71,465800
+250312,583,"Bachar","Houli","RIC","DEF",86.67,465600
+270325,510,"Robbie","Tarrant","NTH","DEF",86.19,463100
+993993,568,"Shai","Bolton","RIC","FWD MID",86.07,462400
+294859,752,"Jeremy","McGovern","WCE","DEF",86,462100
+997142,547,"Peter","Ladhams","PTA","RUC FWD",85.63,460000
+992242,653,"Jordan","Dawson","SYD","DEF",85.38,458700
+294685,129,"Zac","Williams","CAR","DEF",85.36,458600
+291771,209,"Devon","Smith","ESS","MID",85.25,458000
+1000932,8,"Tom","Doedee","ADE","DEF",85.22,457900
+998128,770,"Alex","Witherden","WCE","DEF",94.33,456100
+261323,419,"Ben","McEvoy","HAW","DEF RUC",84.88,456000
+298419,339,"Brandan","Parfitt","GEE","MID",84.71,455100
+298539,661,"Isaac","Heeney","SYD","FWD",94,454500
+998172,391,"Tim","Taranto","GWS","MID",84.45,453700
+296294,216,"Blake","Acres","FRE","MID",84.43,453600
+992351,727,"Bailey","Williams","WBD","DEF",84.24,452600
+291962,437,"Chad","Wingard","HAW","FWD",84.18,452300
+998260,263,"Jack","Bowes","GCS","DEF",84,451300
+293713,272,"Brandon","Ellis","GCS","MID",83.88,450600
+294307,616,"Brad","Crouch","STK","MID",83.5,448600
+298268,739,"Liam","Duggan","WCE","DEF",83.5,448600
+295344,368,"Toby","Greene","GWS","FWD",83.46,448400
+294101,705,"Jason","Johannisen","WBD","DEF",83.44,448300
+990290,733,"Tom","Barrass","WCE","DEF",83.24,447200
+290627,594,"Dion","Prestia","RIC","MID",92.4,446800
+990827,581,"Jack","Graham","RIC","MID",83.08,446400
+296190,109,"Jack","Martin","CAR","FWD",83.07,446300
+290032,584,"Kane","Lambert","RIC","FWD",83,445900
+250321,342,"Joel","Selwood","GEE","MID",82.82,445000
+250105,112,"Marc","Murphy","CAR","MID",82.76,444700
+270896,576,"Trent","Cotchin","RIC","MID",82.54,443500
+1005521,71,"Oscar","McInerney","BRL","RUC",82.53,443400
+298174,591,"Toby","Nankervis","RIC","RUC",82.43,442900
+1005054,139,"Josh","Daicos","COL","MID",82.31,442200
+991930,530,"Darcy","Byrne-Jones","PTA","DEF",82.24,441800
+280921,487,"Ben","Cunnington","NTH","MID",102.33,439800
+1002264,612,"Hunter","Clark","STK","DEF",81.69,438900
+290832,302,"David","Swallow","GCS","MID",81.6,438400
+291748,38,"Brodie","Smith","ADE","DEF MID",81.56,438200
+291351,407,"Jack","Gunston","HAW","FWD",81.56,438200
+280744,396,"Luke","Breust","HAW","FWD",81.54,438100
+298421,620,"Jade","Gresham","STK","MID",81.55,438100
+1001398,107,"Matthew","Kennedy","CAR","FWD MID",81.43,437500
+298630,194,"Kyle","Langford","ESS","FWD MID",81.31,436900
+298524,306,"Lachie","Weller","GCS","MID",81.24,436500
+993946,18,"Ben","Keays","ADE","MID",81.19,436200
+1009420,245,"Caleb","Serong","FRE","MID",81.07,435600
+994185,140,"Jordan","De Goey","COL","FWD",81,435200
+298279,443,"Angus","Brayshaw","MEL","MID",81,435200
+290838,738,"Jack","Darling","WCE","FWD",80.94,434900
+997033,226,"Brennan","Cox","FRE","DEF",80.69,433500
+1002267,488,"Luke","Davies-Uniacke","NTH","MID",80.56,432800
+270935,191,"Michael","Hurley","ESS","DEF",80.29,431400
+297354,523,"Karl","Amon","PTA","MID",80.29,431400
+1004095,286,"Jack","Lukosius","GCS","DEF",80.18,430800
+298288,159,"Darcy","Moore","COL","DEF",80.06,430200
+294733,35,"Paul","Seedsman","ADE","MID",80,429800
+1003130,710,"Patrick","Lipinski","WBD","MID",80,429800
+996765,676,"Tom","Papley","SYD","FWD",79.76,428600
+994389,641,"Jack","Sinclair","STK","MID",79.4,426600
+1005717,614,"Nick","Coffield","STK","DEF",79.38,426500
+295446,267,"Sam","Collins","GCS","DEF",78.65,422500
+1004385,732,"Oscar","Allen","WCE","FWD",78.57,422100
+261892,542,"Hamish","Hartlett","PTA","DEF",78.53,421900
+298290,120,"Marc","Pittonet","CAR","RUC",78.46,421500
+280762,380,"Shane","Mumford","GWS","RUC",78.3,420700
+1002312,49,"Zac","Bailey","BRL","FWD MID",78.24,420300
+998145,228,"Sean","Darcy","FRE","RUC",78.2,420100
+280737,435,"Liam","Shiels","HAW","MID",78.19,420100
+1002227,622,"Jack","Higgins","STK","FWD",78.1,419600
+298281,459,"Jake","Lever","MEL","DEF",78.06,419400
+1000223,566,"Liam","Baker","RIC","DEF",78,419100
+290311,80,"Mitch","Robinson","BRL","MID",77.94,418800
+293846,639,"Sebastian","Ross","STK","MID",77.79,417900
+992374,608,"Dan","Butler","STK","FWD",77.59,416900
+260930,579,"Shane","Edwards","RIC","MID",86.17,416700
+297907,113,"Nic","Newman","CAR","DEF",23.5,415400
+990740,237,"Rory","Lobb","FRE","RUC FWD",77.24,415000
+294737,683,"Callum","Sinclair","SYD","RUC",77.08,414100
+1000959,401,"James","Cousins","HAW","MID",85.33,412600
+1009199,260,"Noah","Anderson","GCS","MID",76.59,411500
+280109,393,"Callan","Ward","GWS","MID",76.29,409900
+1004364,760,"Liam","Ryan","WCE","FWD",76.24,409600
+293651,694,"Hayden","Crozier","WBD","DEF",76.14,409100
+296422,644,"Callum","Wilkie","STK","DEF",76.12,409000
+998103,654,"Oliver","Florent","SYD","MID",76,408300
+270938,21,"Tom","Lynch","ADE","FWD",75.92,407900
+996442,651,"Ryan","Clarke","SYD","MID",75.9,407800
+998130,259,"Ben","Ainsworth","GCS","FWD",75.63,406300
+1006126,681,"James","Rowbottom","SYD","MID",75.5,405600
+1008089,164,"Isaac","Quaynor","COL","DEF",75.44,405300
+292511,351,"Zach","Tuohy","GEE","MID",75.4,405100
+295067,217,"James","Aish","FRE","MID",75.31,404600
+993979,557,"Sam","Powell-Pepper","PTA","FWD MID",75.29,404500
+290787,481,"Shaun","Atley","NTH","DEF",75.24,404200
+293854,248,"Matt","Taberner","FRE","FWD",75,403000
+998529,602,"Ivan","Soldo","RIC","RUC",75,403000
+996487,430,"Tom","Phillips","HAW","FWD MID",74.93,402600
+291773,114,"Jack","Newnes","CAR","MID FWD",74.76,401700
+296200,103,"Michael","Gibbons","CAR","FWD",74.73,401500
+993832,128,"Jacob","Weitering","CAR","DEF",74.71,401400
+291978,652,"Harry","Cunningham","SYD","DEF",74.71,401400
+994539,118,"Sam","Petrevski-Seton","CAR","DEF",74.69,401300
+290198,565,"David","Astbury","RIC","DEF",82.8,400400
+998114,433,"Jack","Scrimshaw","HAW","DEF",74.38,399600
+1006096,534,"Xavier","Duursma","PTA","MID",74.15,398400
+294877,344,"Isaac","Smith","GEE","FWD MID",74,397600
+298298,754,"Jackson","Nelson","WCE","DEF",74,397600
+990609,54,"Charlie","Cameron","BRL","FWD",73.59,395400
+294429,617,"Luke","Dunstan","STK","MID",92,395400
+294125,257,"Nathan","Wilson","FRE","DEF",73.53,395100
+999827,101,"Zac","Fisher","CAR","FWD",73.38,394200
+250362,22,"David","Mackay","ADE","DEF",73.2,393300
+1000072,161,"John","Noble","COL","DEF",73.2,393300
+1002235,77,"Cam","Rayner","BRL","FWD",73.13,392900
+291357,341,"Gary","Rohan","GEE","FWD",73,392200
+296735,493,"Aaron","Hall","NTH","FWD",73,392200
+993953,62,"Eric","Hipwood","BRL","FWD",72.82,391300
+298211,321,"Darcy","Fort","GEE","RUC",80.8,390700
+1006159,406,"Damon","Greaves","HAW","DEF",90.67,389700
+290527,553,"Trent","McKenzie","PTA","DEF",72.27,388300
+296371,219,"Brett","Bewley","FRE","FWD MID",72.25,388200
+293845,312,"Jeremy","Cameron","GEE","FWD",72.24,388100
+291327,400,"Jonathon","Ceglar","HAW","RUC",72.23,388100
+281078,105,"Liam","Jones","CAR","DEF",72.12,387500
+1004938,334,"Gryan","Miers","GEE","FWD",72.06,387100
+993771,593,"Marlion","Pickett","RIC","MID",71.93,386500
+291848,655,"Robbie","Fox","SYD","DEF",71.79,385700
+1008550,402,"Will","Day","HAW","DEF",71.55,384400
+1011936,669,"Justin","McInerney","SYD","MID",71.56,384400
+993917,630,"Ben","Long","STK","DEF",71.5,384100
+280819,582,"Dylan","Grimes","RIC","DEF",71.25,382800
+996580,236,"Ethan","Hughes","FRE","DEF",71.06,381800
+294592,588,"Kamdyn","McIntosh","RIC","MID",71,381500
+294508,486,"Aidan","Corr","NTH","DEF",70.93,381100
+1007102,337,"Mark","O'Connor","GEE","DEF",70.88,380800
+1010841,152,"Jack","Madgen","COL","DEF",70.82,380500
+291548,64,"Ryan","Lester","BRL","DEF",70.77,380200
+291545,724,"Mitch","Wallis","WBD","FWD",70.71,379900
+210012,399,"Shaun","Burgoyne","HAW","FWD",70.46,378600
+1005577,181,"Sam","Draper","ESS","RUC",70.38,378100
+290160,450,"Michael","Hibberd","MEL","DEF",70.36,378000
+281373,757,"Jack","Redden","WCE","MID",70.33,377900
+270326,325,"Lachie","Henderson","GEE","DEF",70.3,377700
+1004998,551,"Todd","Marshall","PTA","FWD",70.25,377400
+1001299,559,"Connor","Rozee","PTA","FWD",70.21,377200
+298144,673,"Sam","Naismith","SYD","RUC",100,376100
+240302,53,"Grant","Birchall","BRL","DEF",69.86,375300
+291526,316,"Luke","Dahlhaus","GEE","FWD",69.83,375200
+294036,662,"George","Hewett","SYD","MID",77.5,374700
+292145,545,"Tom","Jonas","PTA","DEF",69.53,373600
+1002245,567,"Noah","Balta","RIC","DEF",69.54,373600
+290826,737,"Jamie","Cripps","WCE","FWD",69.54,373600
+280416,154,"Chris","Mayne","COL","MID",69.5,373400
+993794,409,"Blake","Hardwick","HAW","DEF",69.44,373100
+290314,376,"Lachlan","Keeffe","GWS","DEF",69.38,372800
+270588,190,"Cale","Hooker","ESS","DEF",69.38,372700
+290641,611,"Jake","Carlisle","STK","DEF",69.33,372500
+1001195,296,"Izak","Rankine","GCS","FWD",69.17,371600
+294092,197,"Anthony","McDonald-Tipungwuti","ESS","FWD",68.94,370400
+290823,225,"Reece","Conca","FRE","DEF",68.93,370300
+1002220,340,"Esava","Ratugolea","GEE","RUC FWD",68.75,369400
+990606,210,"Will","Snelling","ESS","FWD",68.59,368500
+997206,26,"Andrew","McPherson","ADE","DEF",68.56,368300
+293813,585,"Tom J.","Lynch","RIC","FWD",68.25,366700
+996483,713,"Toby","McLean","WBD","FWD",68.25,366700
+291849,158,"Brody","Mihocek","COL","FWD",68.13,366000
+993828,67,"Rhys","Mathieson","BRL","FWD MID",97,364800
+297406,180,"Tom","Cutler","ESS","MID",67.88,364700
+993820,736,"Tom","Cole","WCE","DEF",67.86,364600
+294596,636,"Tim","Membrey","STK","FWD",67.69,363700
+293193,3,"Luke","Brown","ADE","DEF",67.65,363400
+998134,606,"Josh","Battle","STK","FWD MID",67.54,362900
+296269,61,"Darcy","Gardiner","BRL","DEF",67.53,362800
+293801,141,"Jamie","Elliott","COL","FWD MID",67.5,362700
+1001438,447,"Bayley","Fritsch","MEL","FWD",66.88,359300
+1007881,295,"Wil","Powell","GCS","DEF",66.8,358900
+1000963,424,"Harry","Morrison","HAW","DEF MID",66.73,358500
+1005199,15,"Elliott","Himmelberg","ADE","FWD",66.64,358000
+1002251,361,"Brent","Daniels","GWS","FWD",66.38,356600
+993107,371,"Harry","Himmelberg","GWS","FWD",66.13,355300
+993480,625,"Dougal","Howard","STK","DEF",66.12,355200
+294624,121,"Lachie","Plowman","CAR","DEF",66.06,354900
+298470,23,"Shane","McAdam","ADE","FWD",66,354600
+280934,41,"Daniel","Talia","ADE","DEF",66,354600
+293581,68,"Lincoln","McCarthy","BRL","FWD",66,354600
+998115,229,"Taylin","Duman","FRE","DEF",66,354600
+1002240,509,"Jaidyn","Stephenson","NTH","FWD",65.92,354100
+295584,624,"Bradley","Hill","STK","MID",65.88,354000
+298437,46,"Callum","Ah Chee","BRL","DEF",65.75,353300
+294068,204,"Andrew","Phillips","ESS","RUC",73,353000
+270951,214,"David","Zaharakis","ESS","FWD",65.4,351400
+1009528,367,"Tom","Green","GWS","MID",72.67,351400
+992000,631,"Jack","Lonie","STK","FWD",65.36,351200
+1004940,343,"Sam","Simpson","GEE","FWD",72.5,350600
+1009378,470,"Trent","Rivers","MEL","DEF",65.22,350400
+281124,91,"Levi","Casboult","CAR","FWD",65.12,349900
+1002770,133,"Callum L.","Brown","COL","FWD",65.07,349600
+295203,569,"Nathan","Broad","RIC","DEF",65,349200
+1006103,177,"Jye","Caldwell","ESS","FWD MID",64.89,348600
+998109,178,"Dylan","Clarke","ESS","MID FWD",64.88,348600
+993816,251,"Darcy","Tucker","FRE","MID",64.75,347900
+298111,364,"Jeremy","Finlayson","GWS","FWD",64.53,346700
+240406,750,"Josh J.","Kennedy","WCE","FWD",64.44,346200
+998129,264,"Will","Brodie","GCS","MID FWD",36,344900
+297899,449,"James","Harmes","MEL","DEF",64.15,344700
+250395,596,"Jack","Riewoldt","RIC","FWD",64.12,344500
+1004985,637,"Ben","Paton","STK","DEF",64.06,344200
+1006136,36,"Lachlan","Sholl","ADE","DEF MID",63.88,343200
+293603,552,"Sam","Mayes","PTA","DEF",70.83,342500
+290085,698,"Taylor","Duryea","WBD","DEF FWD",91,342200
+293883,309,"Jed","Bews","GEE","DEF",63.63,341800
+1000981,597,"Daniel","Rioli","RIC","FWD",63.57,341500
+991933,571,"Jason","Castagna","RIC","FWD",63.47,341000
+993795,94,"David","Cuningham","CAR","FWD",63.42,340700
+997933,238,"Griffin","Logue","FRE","DEF",70.2,339400
+290117,621,"Dan","Hannebery","STK","MID",70,338500
+280336,235,"Stephen","Hill","FRE","DEF",62.92,338000
+293479,59,"Cameron","Ellis-Yolmen","BRL","FWD MID",62.88,337800
+998484,521,"Cameron","Zurhaar","NTH","FWD",62.88,337800
+1004848,684,"Dylan","Stephens","SYD","MID",62.88,337800
+291720,146,"Will","Hoskin-Elliott","COL","FWD",62.81,337500
+271015,363,"Matt","de Boer","GWS","MID",62.77,337200
+1008123,385,"Jake","Riccardi","GWS","FWD",69.6,336500
+294504,531,"Tom","Clurey","PTA","DEF",62.44,335500
+294570,628,"Dean","Kent","STK","FWD",62.38,335200
+290623,570,"Josh","Caddy","RIC","MID",62.38,335100
+297504,72,"Daniel","McStay","BRL","FWD",62.13,333800
+1002143,500,"Ben","McKay","NTH","DEF",62.09,333600
+1006133,599,"Jack","Ross","RIC","MID",62,333100
+1006058,506,"Bailey","Scott","NTH","FWD MID",61.85,332300
+997823,759,"Josh","Rotham","WCE","DEF",61.7,331500
+297452,188,"Nick","Hind","ESS","FWD",61.6,331000
+290675,379,"Daniel","Lloyd","GWS","FWD",61.58,330900
+997078,205,"Mason","Redman","ESS","DEF",61.46,330200
+296291,331,"Jake","Kolodjashnij","GEE","DEF",61.46,330200
+294643,299,"Alex","Sexton","GCS","FWD",61.43,330000
+1002404,715,"Aaron","Naughton","WBD","FWD",61.36,329700
+291550,515,"Josh","Walker","NTH","DEF",61.35,329600
+992786,564,"Jake","Aarts","RIC","FWD",61.31,329400
+1004863,16,"Mitchell","Hinge","ADE","MID",102,328800
+1000998,28,"Lachlan","Murphy","ADE","FWD",61.17,328600
+297456,281,"Nick","Holman","GCS","FWD",61.17,328600
+290188,679,"Sam","Reid","SYD","FWD",61.1,328300
+1006143,629,"Max","King","STK","FWD",60.94,327400
+994077,572,"Mabior","Chol","RIC","RUC FWD",60.9,327200
+997100,660,"Will","Hayward","SYD","FWD",60.88,327100
+1000937,326,"Jack","Henry","GEE","DEF",60.59,325500
+996743,671,"Lewis","Melican","SYD","DEF",60.44,324700
+996232,185,"Matt","Guelfi","ESS","DEF",60.36,324300
+291819,476,"Adam","Tomlinson","MEL","DEF MID",60.31,324000
+290797,707,"Alex","Keath","WBD","DEF",60.29,323900
+996554,767,"Jake","Waterman","WCE","FWD",60.22,323600
+294828,330,"Josh","Jenkins","GEE","RUC FWD",86,323400
+1005247,392,"Sam","Taylor","GWS","DEF",67,323400
+291533,462,"Tom","McDonald","MEL","FWD",60.11,323000
+294469,522,"Aliir","Aliir","PTA","DEF",59.79,321200
+1009253,353,"Lachie","Ash","GWS","DEF",59.67,320600
+260113,619,"Jarryn","Geary","STK","DEF",59.64,320400
+990816,183,"Aaron","Francis","ESS","DEF",59.63,320300
+1000953,111,"Harry","McKay","CAR","FWD",59.54,319900
+1002228,102,"Lachie","Fogarty","CAR","FWD",66,319100
+290629,187,"Dyson","Heppell","ESS","MID",66,319100
+992128,528,"Ryan","Burton","PTA","DEF",59.33,318800
+1006028,647,"Nick","Blakey","SYD","FWD MID",59.31,318700
+994599,526,"Riley","Bonner","PTA","DEF",59.22,318200
+295313,706,"Lin","Jong","WBD","MID FWD",74,318100
+294077,411,"Michael","Hartley","HAW","DEF",84.5,317800
+1010174,539,"Mitch","Georgiades","PTA","FWD",59,317000
+1003203,670,"Hayden","McLean","SYD","FWD",59,317000
+1006232,687,"Sam","Wicks","SYD","FWD",58.86,316200
+1006137,511,"Curtis","Taylor","NTH","FWD",58.78,315800
+1008543,34,"Harry","Schoenberg","ADE","FWD",58.75,315600
+298358,288,"Oleg","Markov","GCS","DEF",65,314300
+290228,410,"Kyle","Hartigan","HAW","DEF",58.5,314300
+1003029,169,"Brayden","Sier","COL","MID",73,313800
+991939,693,"Zaine","Cordy","WBD","DEF",58.38,313700
+998167,130,"Tom","Williamson","CAR","DEF",58.33,313400
+1008198,667,"Tom","McCartin","SYD","FWD",58.21,312800
+1009399,453,"Luke","Jackson","MEL","FWD",58.17,312500
+990882,27,"Wayne","Milera","ADE","DEF",83,312200
+998647,137,"Mason","Cox","COL","FWD",58.11,312200
+240399,656,"Lance","Franklin","SYD","FWD",0,312000
+280012,166,"Jordan","Roughead","COL","DEF",57.93,311300
+1008171,134,"Tyler","Brown","COL","MID",57.89,311000
+296324,372,"Jesse","Hogan","GWS","FWD",57.86,310800
+1000972,533,"Willem","Drew","PTA","MID",0,310800
+999824,335,"Quinton","Narkle","GEE","MID",64.2,310400
+999309,14,"Jackson","Hately","ADE","MID",64.17,310300
+291947,730,"Brendon","Ah Chee","WCE","FWD",57.73,310200
+296420,464,"Alex","Neal-Bullen","MEL","FWD",57.71,310100
+297473,19,"Jake","Kelly","ADE","DEF",57.67,309800
+1008280,716,"Ed","Richards","WBD","FWD MID",57.56,309300
+1002253,536,"Kane","Farrell","PTA","FWD MID",57.55,309200
+240254,279,"Jarrod","Harbrow","GCS","DEF",57.54,309100
+240060,89,"Eddie","Betts","CAR","FWD",57.47,308800
+280990,555,"Steven","Motlop","PTA","FWD",57.42,308500
+298280,195,"Jayden","Laverde","ESS","FWD",57.33,308000
+1008882,262,"Charlie","Ballard","GCS","DEF",57.25,307600
+1002401,86,"Brandon","Starcevich","BRL","DEF",57.19,307300
+996464,287,"Darcy","MacPherson","GCS","FWD",57.08,306700
+290289,170,"Josh","Thomas","COL","FWD",56.92,305800
+1004912,97,"Tom","De Koning","CAR","RUC",56.86,305500
+997230,39,"Tyson","Stengle","ADE","FWD",56.83,305300
+293738,404,"Sam","Frost","HAW","DEF",56.75,304900
+1005053,48,"Noah","Answerth","BRL","DEF",56.67,304500
+993806,479,"Sam","Weideman","MEL","FWD",56.54,303800
+1004437,255,"Tobe","Watson","FRE","DEF",70.67,303700
+999391,475,"Tom","Sparrow","MEL","MID",62.8,303700
+996692,451,"Marty","Hore","MEL","DEF",0,303600
+992644,383,"Braydon","Preuss","GWS","RUC",62.67,303000
+990291,135,"Darcy","Cameron","COL","FWD",56.38,302900
+1006314,422,"Dylan","Moore","HAW","FWD",70.33,302300
+993799,274,"Brayden","Fiorini","GCS","MID",62.4,301700
+297990,477,"Aaron","vandenBerg","MEL","MID",56.08,301300
+291509,378,"Adam","Kennedy","GWS","MID",56,300900
+1006059,57,"Keidean","Coleman","BRL","FWD",62,299800
+1006144,284,"Ben","King","GCS","FWD",55.59,298700
+996708,695,"Bailey","Dale","WBD","FWD",55.56,298500
+291753,271,"Sam","Day","GCS","FWD",55.53,298300
+280506,43,"Taylor","Walker","ADE","FWD",55.5,298200
+1002282,474,"Charlie","Spargo","MEL","FWD",55.5,298200
+1000860,244,"Lachie","Schultz","FRE","FWD",55.47,298000
+281139,728,"Easton","Wood","WBD","DEF",55.42,297700
+296041,426,"Tim","O'Brien","HAW","FWD",55.38,297500
+261374,384,"Sam J.","Reid","GWS","DEF",30.33,297300
+280824,463,"Jake","Melksham","MEL","FWD",55.24,296800
+296225,758,"Willie","Rioli","WCE","FWD",0,296600
+260288,618,"James","Frawley","STK","DEF",55.07,295900
+1002353,227,"Mitch","Crowden","FRE","FWD",55,295500
+1002300,734,"Jarrod","Brander","WCE","FWD MID",55,295500
+992472,780,"Oscar","McDonald","CAR","DEF",55,295500
+294654,211,"James","Stewart","ESS","FWD",54.9,295000
+298450,220,"Connor","Blakely","FRE","MID",61,295000
+996731,95,"Charlie","Curnow","CAR","FWD",0,294600
+994386,308,"Tom","Atkins","GEE","FWD",54.64,293500
+297438,184,"Martin","Gleeson","ESS","DEF",54.62,293400
+1006276,783,"Derek","Eggmolesse-Smith","RIC","DEF",60.5,292500
+298289,213,"Peter","Wright","ESS","FWD",0,292300
+250222,455,"Nathan","Jones","MEL","FWD MID",54.38,292100
+280804,362,"Phil","Davis","GWS","DEF",54.1,290700
+280969,434,"Tom","*** Scully","HAW","FWD MID",54.07,290500
+250417,11,"Bryce","*** Gibbs","ADE","DEF",60,290100
+1008855,439,"Oskar","Baker","MEL","MID",60,290100
+1005729,512,"Tarryn","Thomas","NTH","FWD",54,290100
+298390,460,"Jay","Lockhart","MEL","DEF",53.9,289600
+293987,548,"Jarrod","Lienert","PTA","DEF",59.8,289200
+998180,218,"Bailey","Banfield","FRE","FWD",59.6,288200
+1001396,360,"Isaac","Cumming","GWS","DEF",67,288000
+1006148,370,"Bobby","Hill","GWS","FWD",59.4,287200
+999331,9,"Darcy","Fogarty","ADE","FWD",53.3,286400
+999326,314,"Brad","Close","GEE","FWD",53.25,286100
+1006087,277,"Caleb","Graham","GCS","DEF",53,284800
+297255,110,"Mitch","McGovern","CAR","FWD",52.83,283900
+1001449,702,"Mitch","Hannan","WBD","FWD",52.78,283600
+293884,212,"Jake","Stringer","ESS","FWD",52.6,282600
+998327,494,"Kyron","Hayden","NTH","DEF",52.38,281400
+992054,719,"Roarke","Smith","WBD","MID FWD",58.2,281400
+992462,412,"Daniel","Howe","HAW","DEF MID",58,280500
+290622,445,"Mitch","Brown","MEL","FWD",52.2,280500
+1002922,610,"Jack","Bytel","STK","MID",58,280500
+992059,247,"Sam","Switkowski","FRE","FWD",0,279400
+1009256,258,"Hayden","Young","FRE","DEF",52,279400
+1005000,723,"Laitham","Vandermeer","WBD","FWD MID",51.92,278900
+1006127,726,"Rhylee","West","WBD","FWD",57.5,278000
+1008190,186,"Brayden","Ham","ESS","MID",51.7,277800
+1002583,603,"Sydney","Stack","RIC","MID FWD",51.67,277600
+270861,143,"Levi","Greenwood","COL","MID",57.25,276800
+290722,658,"Sam","Gray","SYD","FWD",51.43,276300
+280988,224,"Travis","Colyer","FRE","FWD",51.33,275800
+1004880,680,"Ben","Ronke","SYD","FWD",57,275600
+298302,108,"Caleb","Marchbank","CAR","DEF",0,275400
+291492,690,"Josh","Bruce","WBD","FWD",51.19,275000
+290757,643,"Jimmy","Webster","STK","DEF",0,274000
+1005547,269,"Josh","Corbett","GCS","FWD",50.86,273200
+280763,712,"Stefan","Martin","WBD","RUC",50.67,272200
+1009189,497,"Jack","Mahony","NTH","FWD",50.6,271900
+296334,535,"Orazio","Fantasia","PTA","DEF FWD",56.2,271800
+295222,233,"Joel","Hamling","FRE","DEF",0,271000
+997842,675,"Colin","O'Riordan","SYD","DEF",49.88,268000
+296078,491,"Taylor","Garner","NTH","FWD",45,267400
+1002291,646,"James","Bell","SYD","FWD",49.75,267300
+1002242,315,"Charlie","Constable","GEE","MID",62,266500
+998390,415,"Changkuoth","Jiath","HAW","DEF",49.6,266500
+1004965,518,"Tristan","Xerri","NTH","FWD",49.5,265900
+296211,685,"Lewis","Taylor","SYD","FWD",49.44,265600
+1013611,246,"Sam","Sturt","FRE","FWD",61.67,265100
+1006097,201,"Irving","Mosquito","ESS","FWD",54.75,264700
+1001017,495,"Nick","Larkey","NTH","FWD",49.1,263800
+994385,452,"Jayden","Hunt","MEL","FWD",49,263300
+1008154,92,"Matthew","Cottrell","CAR","MID",48.8,262200
+999346,563,"Boyd","Woodcock","PTA","FWD",54,261100
+294266,663,"Tom","Hickey","SYD","RUC",54,261100
+992499,513,"Kayne","Turner","NTH","FWD",0,260800
+291867,444,"Ben","Brown","MEL","FWD",48.44,260300
+280944,520,"Jack","Ziebell","NTH","FWD",48,257900
+1001028,125,"Jack","Silvagni","CAR","FWD",35.33,257400
+991773,10,"Billy","Frampton","ADE","FWD",53.2,257200
+1008454,265,"Connor","Budarick","GCS","DEF",47.73,256500
+1008541,469,"Kysaiah","Pickett","MEL","FWD",47.71,256400
+1004034,215,"Brandon","Zerk-Thatcher","ESS","DEF",47.5,255200
+1002347,75,"Jack","Payne","BRL","DEF",52.75,255100
+1004356,731,"Brayden","Ainsworth","WCE","FWD MID",47.25,253900
+294013,285,"Sean","Lemmens","GCS","FWD",47.17,253400
+295942,291,"Jordan","Murdoch","GCS","DEF",0,253000
+294168,45,"Marcus","Adams","BRL","DEF",28,250400
+991976,703,"Will","Hayes","WBD","MID",47.5,249300
+280038,634,"Shaun","McKernan","STK","FWD",45.78,245900
+1004894,482,"Aiden","Bonar","NTH","DEF",45.67,245400
+295156,648,"Kaiden","Brand","SYD","DEF",57,245000
+1005084,517,"Will","Walker","NTH","MID FWD",65,244500
+294472,261,"Rory","Atkins","GCS","MID",50.5,244200
+291784,514,"Dom","Tyson","NTH","MID",0,243900
+1006152,313,"Jordan","Clark","GEE","DEF MID",50,241800
+291891,305,"Jacob","Townsend","GCS","FWD",44.33,238200
+1001043,408,"Oliver","Hanrahan","HAW","FWD",44.14,237200
+1006203,17,"Chayce","Jones","ADE","MID",44.07,236800
+298409,242,"Alex","Pearce","FRE","DEF",0,235600
+1006100,52,"Thomas","Berry","BRL","FWD",43.83,235500
+294518,58,"Joe","Daniher","BRL","FWD",48.25,233300
+1008282,755,"Xavier","O'Neill","WCE","FWD MID",43.4,233200
+997501,701,"Ryan","Gardner","WBD","DEF",43.33,232800
+290199,782,"Majak","Daw","MEL","FWD",54,232100
+291964,282,"Jack","Hombsch","GCS","DEF",0,230200
+280959,765,"Nathan","Vardy","WCE","RUC",0,228600
+1008893,468,"Harrison","Petty","MEL","DEF FWD",0,228200
+1006135,381,"Xavier","O'Halloran","GWS","MID",60.5,227500
+291797,358,"Matt","Buntine","GWS","DEF FWD",0,225900
+1004286,751,"Zac","Langdon","WCE","FWD",41.86,224900
+1009708,357,"Jack","Buckley","GWS","DEF MID",59.5,223800
+295340,772,"Mason","Wood","STK","FWD",41.5,223000
+298265,633,"Daniel","McKenzie","STK","DEF",0,222300
+295599,173,"Patrick","Ambrose","ESS","DEF",0,217800
+992752,82,"Archie","Smith","BRL","RUC",40.4,217100
+1006550,756,"Jack","Petruccelle","WCE","FWD",40.4,217100
+280722,301,"Zac","Smith","GCS","RUC",0,216000
+1008083,375,"Connor","Idun","GWS","DEF",50,214900
+993841,717,"Josh","Schache","WBD","FWD",39,214400
+1008185,25,"Ned","McHenry","ADE","FWD",39.63,212900
+296254,413,"Jarman","Impey","HAW","FWD",39.6,212800
+1003546,473,"Joel","Smith","MEL","DEF",39.29,211100
+1008159,13,"Will","Hamill","ADE","DEF",39.25,210900
+1000068,266,"Chris","Burgess","GCS","DEF",0,210000
+1009301,722,"Jamarra","Ugle-Hagan","WBD","FWD",0,207300
+290889,398,"Keegan","Brooksby","HAW","RUC FWD",55,206900
+1009383,167,"Trey","Ruscoe","COL","FWD",38.5,206800
+1008384,42,"Riley","Thilthorpe","ADE","RUC FWD",0,202800
+1002256,99,"Paddy","Dow","CAR","FWD MID",37.67,202400
+1004909,519,"Lachie","Young","NTH","DEF MID",47,202000
+992015,501,"Connor","Menadue","NTH","DEF",0,201500
+1007238,389,"Jake","Stein","GWS","DEF",0,200100
+1000887,417,"Mitch","Lewis","HAW","FWD",37.13,199500
+1009201,24,"Fischer","Mcasey","ADE","DEF FWD",37.1,199300
+1012829,503,"Will","Phillips","NTH","MID",0,198300
+997316,729,"Lewis","Young","WBD","DEF",0,198300
+1009421,418,"Finn","Maginness","HAW","MID",52,195600
+1008091,645,"Joel","Amartey","SYD","RUC FWD",52,195600
+296070,692,"Ben","Cavarra","WBD","FWD",45.33,194900
+1013230,668,"Logan","McDonald","SYD","FWD",0,193800
+1007124,425,"Conor","Nash","HAW","FWD",40,193400
+1011771,502,"Flynn","Perez","NTH","DEF",45,193400
+1006114,768,"Bailey J.","Williams","WCE","RUC FWD",45,193400
+1009260,275,"Sam","Flanders","GCS","FWD",35.8,192300
+298417,7,"Ben","Davis","ADE","FWD",51,191800
+1011992,691,"Louis","Butler","WBD","DEF",51,191800
+998321,538,"Joel","Garner","PTA","DEF",0,189900
+291821,428,"Jonathon","Patton","HAW","FWD",35.33,189800
+1013133,649,"Braeden","Campbell","SYD","MID FWD",0,189300
+998218,580,"Ryan","Garthwaite","RIC","DEF",0,188000
+1008312,126,"Liam","Stocker","CAR","DEF",0,186500
+281280,454,"Neville","Jetta","MEL","DEF",34.67,186300
+1013093,405,"Denver","Grainger-Barras","HAW","DEF",0,184800
+1005988,234,"Liam","Henry","FRE","FWD",34.33,184500
+999715,273,"Jy","Farrar","GCS","FWD",49,184300
+998791,748,"Jamaine","Jones","WCE","FWD",48.5,182400
+260246,540,"Tyson","Goldsack","PTA","DEF",0,182000
+1002259,115,"Lochie","O'Brien","CAR","MID",42,180500
+1004870,323,"Zach","Guthrie","GEE","DEF MID",42,180500
+1002231,590,"Patrick","Naish","RIC","MID",42,180500
+1012862,280,"Elijah","Hollands","GCS","MID FWD",0,180300
+998414,766,"Daniel","Venables","WCE","FWD",0,179900
+1003520,627,"Darragh","Joyce","STK","DEF",0,177300
+1004995,4,"Jordon","Butts","ADE","DEF",47,176800
+1009385,79,"Deven","Robertson","BRL","MID FWD",47,176800
+1015827,179,"Nikolas","Cox","ESS","DEF FWD",0,175800
+999321,230,"Michael","Frederick","FRE","FWD",32.7,175700
+1008288,483,"Atu","Bosenavulagi","NTH","FWD",32.67,175500
+1011803,725,"Cody","Weightman","WBD","FWD",32.33,173700
+1015873,203,"Archie","Perkins","ESS","MID FWD",0,171300
+1011929,119,"Sam","Philp","CAR","FWD",45.5,171100
+1012817,206,"Zach","Reid","ESS","DEF",0,166800
+1004949,665,"Matthew","Ling","SYD","DEF",30.33,163000
+1012218,32,"Luke","Pedlar","ADE","MID",0,162300
+1009223,176,"Ned","Cahill","ESS","FWD",30,161200
+1005330,446,"Kade","Chandler","MEL","FWD",0,161200
+1000061,573,"Callum","Coleman-Jones","RIC","RUC FWD",0,161200
+1013974,148,"Mark","Keane","COL","DEF",42,158000
+1012805,356,"Tanner","Bruhn","GWS","MID",0,157800
+281052,745,"Mark","Hutchings","WCE","MID FWD",29.33,157600
+290246,484,"Tom","Campbell","NTH","RUC FWD",36,154700
+1005793,735,"Jarrod","Cameron","WCE","FWD",28.6,153700
+1011659,505,"Tom","Powell","NTH","MID",0,153300
+1013224,223,"Heath","Chapman","FRE","DEF",0,148800
+1008752,40,"Kieran","Strachan","ADE","RUC FWD",39,146700
+1002351,50,"Connor","Ballenden","BRL","FWD",34,146100
+1009226,578,"Thomson","Dow","RIC","MID",34,146100
+1008537,423,"Josh","Morris","HAW","FWD",27,145100
+1015862,390,"Conor","Stone","GWS","FWD",0,144300
+1012014,686,"Chad","Warner","SYD","FWD",33.5,144000
+1009380,300,"Jeremy","Sharp","GCS","MID",33,141800
+1011583,546,"Lachlan","Jones","PTA","DEF",0,139800
+280933,638,"Dylan","*** Roberton","STK","DEF",26,139700
+1008940,329,"Ben","Jarvis","GEE","DEF FWD",37,139200
+1008139,440,"Toby","Bedford","MEL","FWD",25.5,137000
+1008285,149,"Will","Kelly","COL","FWD",36,135400
+296984,374,"Tom","Hutchesson","GWS","MID FWD",36,135400
+1012860,145,"Oliver","Henry","COL","FWD",0,135300
+1015777,352,"Ryan","Angwin","GWS","MID",0,130800
+1013532,60,"Tom","Fullarton","BRL","RUC FWD",30,128900
+1005599,742,"Luke","Foley","WCE","DEF",34,127900
+1012828,151,"Finlay","Macrae","COL","MID FWD",0,126300
+1018075,12,"Lachlan","Gollant","ADE","DEF MID",0,123900
+1011254,31,"Ronin","O'Connor","ADE","MID",0,123900
+1011981,44,"Josh","Worrell","ADE","DEF FWD",0,123900
+298336,55,"Nakia","Cockatoo","BRL","MID FWD",0,123900
+1006150,63,"Tom","Joyce","BRL","FWD MID",0,123900
+1013978,66,"James","Madden","BRL","DEF FWD",0,123900
+1006085,70,"Connor","McFadyen","BRL","FWD",0,123900
+1009386,76,"Jaxon","Prior","BRL","DEF",0,123900
+1009242,83,"Brock","Smith","BRL","DEF",0,123900
+1006033,84,"Ely","Smith","BRL","FWD MID",0,123900
+1002938,104,"Josh","Honey","CAR","MID FWD",16,123900
+1009241,106,"Brodie","Kemp","CAR","MID",0,123900
+1013973,116,"Matthew","Owies","CAR","FWD",15,123900
+1002942,122,"Sam","Ramsay","CAR","MID",0,123900
+1009186,132,"Trent","Bianco","COL","DEF MID",0,123900
+1000960,150,"Max","Lynch","COL","RUC FWD",22,123900
+1005107,160,"Nathan","Murphy","COL","DEF",0,123900
+1015793,165,"Jay","Rantall","COL","MID",0,123900
+1013975,171,"Anton","Tohill","COL","FWD",0,123900
+993797,172,"Tom","Wilson","COL","FWD",0,123900
+1011954,175,"Nick","Bryan","ESS","RUC",0,123900
+1020224,189,"Tom","Hird","ESS","MID",0,123900
+1006506,192,"Lachlan","Johnson","ESS","MID FWD",0,123900
+1011755,193,"Harrison","Jones","ESS","FWD",0,123900
+1018969,196,"Cian","McBride","ESS","DEF",0,123900
+1019156,199,"Ross","McQuillan","ESS","DEF FWD",0,123900
+1002354,232,"Stefan","Giro","FRE","MID",0,123900
+1000980,239,"Lloyd","Meek","FRE","RUC",0,123900
+1009381,249,"Leno","Thomas","FRE","DEF",0,123900
+1004850,252,"Luke","Valente","FRE","MID",0,123900
+1009334,268,"Matt","Conroy","GCS","RUC",0,123900
+1000044,289,"Jez","McLennan","GCS","DEF",0,123900
+1016116,292,"Patrick","Murtagh","GCS","FWD",0,123900
+1005986,297,"Malcolm","Rosas","GCS","FWD",0,123900
+281075,303,"Rory","Thompson","GCS","DEF",0,123900
+1019157,304,"Luke","Towey","GCS","DEF",0,123900
+1006101,311,"Oscar","Brownless","GEE","FWD",0,123900
+1009229,318,"Sam","De Koning","GEE","DEF",0,123900
+1017255,320,"Francis","Evans","GEE","FWD",0,123900
+997254,332,"Nathan","Kreuger","GEE","FWD",0,123900
+1013977,338,"Stefan","Okunbor","GEE","DEF",0,123900
+1004948,346,"Cooper","Stephens","GEE","MID",0,123900
+1008603,349,"Cameron","Taheny","GEE","FWD",0,123900
+1008436,354,"Kieren","Briggs","GWS","DEF FWD",0,123900
+1014038,355,"Callum M.","Brown","GWS","DEF",0,123900
+993902,366,"Matt","Flynn","GWS","RUC",0,123900
+1002296,387,"Nick","Shipley","GWS","MID",0,123900
+998225,388,"Zach","Sproule","GWS","FWD",0,123900
+1005150,414,"Emerson","Jeka","HAW","FWD",0,123900
+1006030,416,"Jacob","Koschitzke","HAW","DEF",0,123900
+1011873,429,"Harry","Pepper","HAW","DEF",0,123900
+1001024,431,"Ned","Reeves","HAW","RUC",0,123900
+1014081,442,"Austin","Bradtke","MEL","RUC",0,123900
+1013409,456,"James","Jordon","MEL","MID",0,123900
+1004695,465,"Aaron","Nietschke","MEL","MID",0,123900
+1015781,485,"Charlie","Comben","NTH","RUC FWD",0,123900
+1006653,499,"Matt","McGuinness","NTH","DEF",0,123900
+1009191,524,"Miles","Bergman","PTA","FWD",0,123900
+1008531,527,"Trent","Burgoyne","PTA","MID FWD",0,123900
+999320,537,"Martin","Frederick","PTA","DEF",0,123900
+1002248,543,"Sam","Hayes","PTA","RUC",0,123900
+1005326,554,"Jackson","Mead","PTA","MID",0,123900
+1009389,556,"Jake","Pasini","PTA","DEF",0,123900
+1009195,561,"Dylan","Williams","PTA","MID FWD",0,123900
+1008297,575,"Riley","Collier-Dawkins","RIC","MID",0,123900
+1009308,577,"Noah","Cumberland","RIC","MID FWD",0,123900
+1009313,587,"Will","Martyn","RIC","MID",0,123900
+1002403,589,"Ben","Miller","RIC","DEF",0,123900
+1006193,592,"Bigoa","Nyuon","RIC","DEF RUC",0,123900
+1011985,595,"Hugo","Ralphsmith","RIC","MID FWD",0,123900
+1013976,605,"Sam","Alabakis","STK","RUC",0,123900
+1011994,609,"Ryan","Byrnes","STK","MID",22,123900
+1002266,613,"Oscar","Clavarino","STK","DEF",0,123900
+1009228,615,"Leo","Connolly","STK","DEF MID",0,123900
+1004113,657,"Will","Gould","SYD","DEF",0,123900
+1019158,674,"Barry","O'Connor","SYD","DEF FWD",0,123900
+1006533,700,"Riley","Garcia","WBD","MID",0,123900
+998782,708,"Buku","Khamis","WBD","DEF",0,123900
+992330,720,"Jordon","Sweet","WBD","RUC",0,123900
+1011437,740,"Harry","Edwards","WCE","DEF",10,123900
+1011243,746,"Callum","Jamieson","WCE","RUC",0,123900
+1011464,747,"Ben","Johnson","WCE","DEF",0,123900
+1015889,328,"Max","Holmes","GEE","MID FWD",0,121800
+1012807,1,"Sam","Berry","ADE","MID",0,117300
+1018335,5,"Brayden","Cook","ADE","MID FWD",0,117300
+999316,33,"James","Rowe","ADE","FWD",0,117300
+1013256,56,"Blake","Coleman","BRL","FWD",0,117300
+1007099,81,"Harry","Sharp","BRL","DEF MID",0,117300
+1016189,85,"Henry","Smith","BRL","RUC",0,117300
+1013233,90,"Jack","Carroll","CAR","MID",0,117300
+1008510,100,"Corey","Durdin","CAR","MID FWD",0,117300
+1004757,155,"Beau","McCreery","COL","FWD",0,117300
+1013278,156,"Reef","McInnes","COL","MID",0,117300
+1012842,157,"Liam","McMahon","COL","FWD",0,117300
+1011589,163,"Caleb","Poulter","COL","MID FWD",0,117300
+1012837,174,"Cody","Brand","ESS","DEF",0,117300
+1015712,182,"Joshua","Eyre","ESS","DEF FWD",0,117300
+1013220,241,"Nathan","O'Driscoll","FRE","MID",0,117300
+1009410,253,"Brandon","Walker","FRE","DEF",0,117300
+1009401,256,"Joel","Western","FRE","MID",0,117300
+1016433,336,"Shannon","Neale","GEE","RUC FWD",0,117300
+1007101,347,"Nick","Stevens","GEE","DEF",0,117300
+1012863,365,"Cameron","Fleeton","GWS","DEF",0,117300
+1004530,394,"Jacob","Wehr","GWS","DEF",0,117300
+1013511,397,"Tyler","Brockman","HAW","MID FWD",0,117300
+1012830,403,"Connor","Downie","HAW","MID",0,117300
+1018016,420,"Seamus","Mitchell","HAW","FWD",0,117300
+1012825,441,"Jake","Bowey","MEL","MID FWD",0,117300
+1012826,458,"Bailey","Laurie","MEL","DEF FWD",0,117300
+1013086,471,"Fraser","Rosman","MEL","MID FWD",0,117300
+1012833,490,"Eddie","Ford","NTH","FWD",0,117300
+1012852,496,"Charlie","Lazzaro","NTH","MID",0,117300
+1011647,508,"Phoenix","Spicer","NTH","MID FWD",0,117300
+1012881,549,"Ollie","Lord","PTA","FWD",0,117300
+1009551,598,"Maurice","Rioli","RIC","MID FWD",0,117300
+1012386,600,"Samson","Ryan","RIC","RUC",0,117300
+998195,623,"Thomas","Highmore","STK","DEF",0,117300
+1015714,635,"Matthew","McLeod-Allison","STK","FWD",0,117300
+1013128,659,"Errol","Gulden","SYD","MID",0,117300
+1015822,688,"Dominic","Bedendo","WBD","FWD",0,117300
+1006576,741,"Luke","Edwards","WCE","MID",0,117300
+1009291,769,"Isiah","Winder","WCE","DEF MID",0,117300
+1009029,2,"James","Borlase","ADE","DEF",0,102400
+1016082,29,"Tariek","Newchurch","ADE","MID FWD",0,102400
+1013260,73,"Carter","Michael","BRL","MID",0,102400
+1021659,87,"Deividas","Uosis","BRL","DEF",0,102400
+1012409,117,"Luke","Parks","CAR","DEF",0,102400
+1015901,136,"Isaac","Chugg","COL","DEF FWD",0,102400
+1012857,142,"Jack","Ginnivan","COL","MID FWD",0,102400
+1012819,250,"Josh","Treacy","FRE","RUC FWD",0,102400
+1013268,270,"Alex","Davies","GCS","MID",0,102400
+1013263,276,"Aiden","Fyfe","GCS","DEF MID",0,102400
+1005992,283,"Joel","Jeffrey","GCS","DEF",0,102400
+1013247,293,"Rhys","Nicholls","GCS","DEF",0,102400
+1009320,294,"Hawego Paul","Oea","GCS","MID FWD",0,102400
+1007049,350,"Paul","Tsapatolis","GEE","RUC",0,102400
+1015688,386,"Will","Shaw","GWS","DEF",0,102400
+1008600,432,"Jack","Saunders","HAW","MID FWD",0,102400
+1013191,516,"Patrick","Walker","NTH","DEF",0,102400
+1012310,560,"Taj","Schofield","PTA","MID",0,102400
+1021660,574,"Mate","Colina","RIC","RUC",0,102400
+1011650,650,"Malachy","Carruthers","SYD","DEF",0,102400
+1013138,682,"Marc","Sheather","SYD","FWD",0,102400
+1009015,714,"Lachlan","McNeil","WBD","MID",0,102400
+1011449,764,"Zane","Trew","WCE","MID",0,102400
+1008478,773,"Rhyan","Mansell","RIC","DEF",0,102400
+992597,774,"Paul","Hunter","STK","RUC",0,102400
+992048,775,"Anthony","Scott","WBD","MID FWD",0,102400
+298445,776,"Alec","Waterman","ESS","FWD",0,102400
+1000864,777,"Lachlan","Bramble","HAW","MID",0,102400
+1008975,778,"Kaine","Baldwin","ESS","FWD",0,102400
+1008230,779,"Nicholas","Murray","ADE","DEF",0,102400
+1009288,781,"Deakyn","Smith","MEL","DEF",0,102400
