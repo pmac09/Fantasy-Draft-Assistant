@@ -29,11 +29,7 @@
 
 # RStudio files
 .Rproj.user/
-<<<<<<< HEAD
 *.Rproj
-=======
-.Rproj
->>>>>>> 21d26e86e848ddca1b38f180840cb08c03811242
 
 # produced vignettes
 vignettes/*.html
