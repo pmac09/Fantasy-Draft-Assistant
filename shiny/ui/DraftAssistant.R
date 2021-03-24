@@ -1,21 +1,59 @@
 fluidPage(
+  
+  # CSS for player cells
+  tags$head(tags$style(styles)),
+  
   fluidRow(
     
     # LEFT #########################################################################
     column(
       width=6,
       h4("PMAC'S TEAM"),
-      wellPanel(
-        style = "height:604px; background:white;",
-        fillCol(
-          "DEF",
-          "MID",
-          'RUC',
-          'FWD',
-          'BEN'
+      # FIELD START ################################################################## 
+      div(
+        id="fieldLayout",
+        
+        div(
+          id="onFieldLayout",
+          div(
+            class="positionalLine",
+            div(),
+            div(playerCell(),playerCell()),
+            div(playerCell(),playerCell(),playerCell())
+          ),
+          div(
+            class="positionalLine",
+            div(playerCell(),playerCell()),
+            div(playerCell(),playerCell(),playerCell()),
+            div(playerCell(),playerCell())
+          ),
+          div(
+            class="positionalLine",
+            div(playerCell())
+          ),
+          div(
+            class="positionalLine",
+            div(playerCell(),playerCell(),playerCell()),
+            div(playerCell(),playerCell()),
+            div()
+          )
+        ),
+        div(
+          id="offFieldLayout",
+          div(
+            id='benchLine',
+            playerCell(bench=TRUE),
+            playerCell(bench=TRUE),
+            playerCell(bench=TRUE),
+            playerCell(bench=TRUE),
+            playerCell(bench=TRUE)
+            
+          )
         )
       )
+      # FIELD END ####################################################################
     ),
+     
     
     # MIDDLE #######################################################################
     column(
@@ -42,8 +80,27 @@ fluidPage(
         )
       ),
       wellPanel(
-        style = "overflow-y:scroll; height:550px; background:white;", 
-        "Players"
+        style = "overflow-y:scroll; height:650px; background:white;", 
+        
+        productList(
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
+          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC')
+        )
+        
       )
     ),
     
@@ -58,7 +115,7 @@ fluidPage(
         h4('DRAFT LOG'),
         wellPanel(
           style = "overflow-y:scroll; 
-                   height:360px; 
+                   height:460px; 
                    background:white;", 
           "30. A.Gaff",br(),
           "29. R.O'Brien",br(),

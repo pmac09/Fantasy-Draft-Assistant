@@ -6,6 +6,10 @@ library(shinydashboard)
 library(shinydashboardPlus)
 library(shinyWidgets)
 
+source('../functions/secrets.R', local=TRUE)
+source('../functions/styles.R', local=TRUE)
+source('../functions/playerPool.R', local=TRUE)
+
 ################################################################################
 # UI
 
@@ -15,12 +19,13 @@ ui <- dashboardPage(
     ),
     
     dashboardSidebar(#disable=TRUE,
-        sidebarMenu(
-            id = "sidebarTabs",
-            menuItem("Draft Setup",     tabName = "tabSetup",   icon = icon("cog")),
-            menuItem("Draft Assistant", tabName = "tabDraft",   icon = icon("list-ol")),
-            menuItem("Draft Summary",   tabName = "tabSummary", icon = icon("users"))
-        )
+      collapsed = TRUE,
+      sidebarMenu(
+          id = "sidebarTabs",
+          #menuItem("Draft Setup",     tabName = "tabSetup",   icon = icon("cog")),
+          menuItem("Draft Assistant", tabName = "tabDraft",   icon = icon("list-ol")),
+          menuItem("Draft Summary",   tabName = "tabSummary", icon = icon("users"))
+      )
     ),
     
     dashboardBody(
