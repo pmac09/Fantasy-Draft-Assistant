@@ -81,26 +81,29 @@ fluidPage(
       ),
       wellPanel(
         style = "overflow-y:scroll; height:650px; background:white;", 
-        
         productList(
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC'),
-          productListItem(src='./teams/MEL.png',productTitle = 'Max Gawn','RUC')
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem(),
+          playerItem()
         )
-        
       )
     ),
     

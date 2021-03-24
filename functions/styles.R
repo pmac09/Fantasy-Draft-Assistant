@@ -38,7 +38,7 @@ styles <- "
   max-width:150px;
   margin:5px;
   overflow: hidden;
-  background:silver;
+  background:LightGrey;
   border-style:solid;
   border-width:1px;
   text-align:left;
@@ -71,10 +71,36 @@ styles <- "
   line-height: 80%;
 }
 
+.playerItem {
+  display: block;
+  width:100%;
+}
 
+.playerItem .teamLogo {
+  float:left;
+}
 
+.playerItem .teamLogo img{
+  height:34px;
+  width:34px;
+}
 
+.playerItem .playerName {
+  font-size: 17px;
+  margin-left: 40px;
+  padding: 5px 0;
+  height:100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
+.playerItem .playerPos {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  float:right;
+}
 
 
 "
