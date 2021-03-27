@@ -65,7 +65,7 @@ fluidPage(
           column(
             width=6,
             style='padding:0px;',
-            textInput(inputId= 'textSearch', label=NULL)
+            textInput(inputId= 'uiTextSearch', label=NULL)
           ),
           column(
             width=3,
@@ -79,39 +79,14 @@ fluidPage(
           )
         )
       ),
-      wellPanel(
-        style = "overflow-y:scroll; height:650px; background:white;", 
-        productList(
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem(),
-          playerItem()
-        )
-      )
+      uiOutput('uiPlayerPool')
     ),
     
     # RIGHT ########################################################################
     column(
       width=2,
       style='padding:0px;',
-      valueBox('176', 'Round 22', width=12, icon = icon("clipboard-list")),
+      uiOutput('uiPickCounter'),
       valueBox(0:00, "Time Remaining", width=12, icon = icon('stopwatch'), color='red'),
       column(
         width=12,

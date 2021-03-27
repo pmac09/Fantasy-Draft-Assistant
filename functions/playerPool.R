@@ -19,15 +19,30 @@ playerCell <- function(bench=FALSE){
   return(ui)
 }
 
-playerItem <- function(){
+playerItem <- function(vPlayerName='P.Layer-Name', vTeam='ESS', vPos='MID FWD'){
+  
+  vPos <- unlist(str_split(vPos, ' '))
+  
+  pos_list <- list()
+  if(length(pos_list)>0){
+    for(i in 1:length(vPos)){
+      pos_list[[i]] <- actionButton('btn',vPos[i], width = 60)
+    }
+  }
+  
+  team_img <- NULL
+  if(!is.null(vTeam)){
+    team_img <- img(src = paste0('./teams/colours/',vTeam,'.png'))
+  }
+
   
   shiny::tags$li(
     class = "item", 
     div(
       class='playerItem',
-      div(class='playerPos', actionButton('b','MID'), actionButton('b','FWD')),
-      div(class='teamLogo', img(src = './teams/colours/ESS.png')),
-      div(class='playerName', "A.McDonald-Tipungwuti")
+      div(class='playerPos', pos_list),
+      div(class='teamLogo', team_img),
+      div(class='playerName', vPlayerName)
     )
   )
   
