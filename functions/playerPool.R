@@ -19,14 +19,13 @@ playerCell <- function(bench=FALSE){
   return(ui)
 }
 
-playerItem <- function(vPlayerName='P.Layer-Name', vTeam='ESS', vPos='MID FWD'){
+playerItem <- function(vPlayerID=999999, vPlayerName='No Player Found', vTeam=NULL, vPos=NULL){
   
   vPos <- unlist(str_split(vPos, ' '))
-  
   pos_list <- list()
-  if(length(pos_list)>0){
+  if(length(vPos)>0){
     for(i in 1:length(vPos)){
-      pos_list[[i]] <- actionButton('btn',vPos[i], width = 60)
+      pos_list[[i]] <- actionButton(paste0('btnDraft_',vPlayerID,'_',vPos[i]),vPos[i], width = 60)
     }
   }
   

@@ -3,6 +3,22 @@ fluidPage(
   # CSS for player cells
   tags$head(tags$style(styles)),
   
+  # JQuery Script for the drafting buttons
+  tags$head(
+    tags$script(
+      '$(document).on("click", "button", function(e) {
+        e.stopPropagation()
+        if(typeof BUTTON_CLICK_COUNT == "undefined") {
+          BUTTON_CLICK_COUNT = 1;
+        } else {
+          BUTTON_CLICK_COUNT ++;
+        }
+        Shiny.onInputChange("js.button_clicked",
+                            e.target.id + "_" + BUTTON_CLICK_COUNT);
+      });'
+    )
+  ),
+  
   fluidRow(
     
     # LEFT #########################################################################
@@ -70,12 +86,12 @@ fluidPage(
           column(
             width=3,
             style='padding:0px;',
-            selectInput(inputId= "uiTeamFilter", label=NULL, choices = list('ALL','ADE','BRL', 'CAR')),
+            selectInput(inputId= "uiTeamFilter", label=NULL, choices = list('ALL','ADE','BRL','CAR','COL','ESS','FRE','GCS','GEE','GWS','HAW','MEL','NTH','PTA','RIC','STK','SYD','WBD','WCE')),
           ),
           column(
             width=3,
             style='padding:0px;',
-            selectInput(inputId= "uiPosFilter" , label=NULL, choices = list('ALL','DEF','MID', 'RUC'))
+            selectInput(inputId= "uiPosFilter" , label=NULL, choices = list('ALL','DEF','MID','RUC','FWD'))
           )
         )
       ),
