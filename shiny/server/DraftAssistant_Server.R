@@ -7,7 +7,6 @@ vPlayers <- get_players(vDraftCode)
 
 ################################################################################
 ## REACTIVE FUNCTIONS
-
 rDraftTable <- get_draft_table(vDraftCode)
 makeReactiveBinding('rDraftTable')
 
@@ -22,9 +21,6 @@ rDraftSelection <- reactive({
   vDraftSelection <- draft_selection(vButtonID, vPlayers)
   return(vDraftSelection)
 })
-
-
-
 
 ################################################################################
 ## OBSERVES
@@ -94,7 +90,27 @@ output$uiPlayerPool <- renderUI({
   
   return(ui)
 })
-
+output$uiDraftLog <- renderUI({
+  
+  vDraftTable <- rDraftTable
+  
+  vDraftLog <- vDraftTable %>%
+    mutate(player_id = as.numeric(player_id)) %>%
+    inner_join(vPlayers, by=c('player_id')) %>%
+    mutate(horizontal_line = ifelse(pick/8==round, '<hr/>', '')) %>%
+    mutate(draft_log = paste0(horizontal_line, pick, '. ', player_name, ' (',team,')')) %>%
+    arrange(desc(pick)) %>%
+    select(draft_log)
+  
+  ui <- wellPanel(
+    style = "overflow-y:scroll; 
+                   height:460px; 
+                   background:white;", 
+    HTML(paste(vDraftLog$draft_log, br()))
+  )
+  
+  return(ui)
+})
 
 
 
