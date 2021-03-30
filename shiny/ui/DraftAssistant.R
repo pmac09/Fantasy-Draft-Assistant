@@ -24,57 +24,14 @@ fluidPage(
     # LEFT #########################################################################
     column(
       width=6,
-      h4("PMAC'S TEAM"),
-      # FIELD START ################################################################## 
-      div(
-        id="fieldLayout",
-        
-        div(
-          id="onFieldLayout",
-          div(
-            class="positionalLine",
-            div(),
-            div(playerCell(),playerCell()),
-            div(playerCell(),playerCell(),playerCell())
-          ),
-          div(
-            class="positionalLine",
-            div(playerCell(),playerCell()),
-            div(playerCell(),playerCell(),playerCell()),
-            div(playerCell(),playerCell())
-          ),
-          div(
-            class="positionalLine",
-            div(playerCell())
-          ),
-          div(
-            class="positionalLine",
-            div(playerCell(),playerCell(),playerCell()),
-            div(playerCell(),playerCell()),
-            div()
-          )
-        ),
-        div(
-          id="offFieldLayout",
-          div(
-            id='benchLine',
-            playerCell(bench=TRUE),
-            playerCell(bench=TRUE),
-            playerCell(bench=TRUE),
-            playerCell(bench=TRUE),
-            playerCell(bench=TRUE)
-            
-          )
-        )
-      )
-      # FIELD END ####################################################################
+      h3(textOutput('uiTeamName')),
+      uiOutput('uiFieldLayout')
     ),
-     
     
     # MIDDLE #######################################################################
     column(
       width=4,
-      h4('PLAYER POOL'),
+      h3('PLAYER POOL'),
       fluidRow(
         column(
           width=12,
@@ -103,10 +60,10 @@ fluidPage(
       width=2,
       style='padding:0px;',
       uiOutput('uiPickCounter'),
-      valueBox(0:00, "Time Remaining", width=12, icon = icon('stopwatch'), color='red'),
+      uiOutput('uiPickTimer'),
       column(
         width=12,
-        h4('DRAFT LOG'),
+        h3('DRAFT LOG'),
         uiOutput('uiDraftLog')
       )
     )

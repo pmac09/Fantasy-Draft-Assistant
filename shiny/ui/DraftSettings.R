@@ -58,12 +58,12 @@ fluidRow(
     selectInput(
       inputId = "uiTurnLength", 
       label = 'Turn Length:', 
-      choices = list('30 seconds'  = 1, 
-                     '60 seconds'  = 2, 
-                     '90 seconds'  = 3,
-                     '120 seconds' = 4,
-                     'No Limit'    = 5), 
-      selected = 5
+      choices = list('30 seconds', 
+                     '60 seconds', 
+                     '90 seconds',
+                     '120 seconds',
+                     'No Limit'), 
+      selected = 'No Limit'
     )
 
   ),

@@ -1,19 +1,19 @@
 
-playerCell <- function(bench=FALSE){
+playerCell <- function(vPlayerName='P.LayerName', vTeam='ESS', vPos='MID', vBench=FALSE){
   
-  styles <- ifelse(bench, '', 'display:inline-block; width:150px;')
+  styles <- ifelse(vBench, '', 'display:inline-block; width:150px;')
   
   ui<- div(
     class='playerCell',
     style=styles,
     div(
       class='teamLogo',
-      img(src = './teams/logos/ESS.jpg')
+      img(src = paste0('./teams/logos/',vTeam,'.jpg'))
     ),
     div(
       class='playerInfo',
-      div(class='playerName', "M.Bontempelli"),
-      div(class='playerPos', "MID/FWD")
+      div(class='playerName', vPlayerName),
+      div(class='playerPos', vPos)
     )
   )
   return(ui)

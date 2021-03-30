@@ -4,9 +4,20 @@
 
 vDraftCode <- 'ACM7LDxkZJfj'
 vPlayers <- get_players(vDraftCode)
+vSettings <- get_settings(vDraftCode)
+
+vTimerReset <- case_when(
+  vSettings$turnLength == '30 seconds' ~ 30,
+  vSettings$turnLength == '60 seconds' ~ 60,
+  vSettings$turnLength == '90 seconds' ~ 90,
+  vSettings$turnLength == '120 seconds' ~ 120,
+  TRUE ~ 0
+) + 1
+vTimer <- vTimerReset
 
 ################################################################################
 ## REACTIVE FUNCTIONS
+
 rDraftTable <- get_draft_table(vDraftCode)
 makeReactiveBinding('rDraftTable')
 
@@ -55,26 +66,141 @@ observeEvent(input$uiConfirmDraft,{
     updateTextInput(session, "uiTextSearch", value = '')
     updateSelectInput(session, "uiTeamFilter", selected = 'ALL')
     updateSelectInput(session, "uiPosFilter", selected = 'ALL')
-  
+    
+    # Reset Timer
+    vTimer <<- vTimerReset
   }
 })
 observeEvent(rDraftTable,{
   vDraftTable <- rDraftTable
   save_draft_table(vDraftCode, vDraftTable)
+  
+  vPicksRemaining <- nrow(vDraftTable %>% filter(player_id == ""))
+  if(vPicksRemaining == 0){
+    sendSweetAlert(
+      session = session,
+      title = "Draft Complete!",
+      type = "success"
+    )
+    
+    updateTabItems(session, 'sidebarTabs', 'tabSummary')
+  }
+  
+  
 })
-
 
 ################################################################################
 ## UI RENDERS
 
-output$uiPickCounter <- renderUI({
+output$uiTeamName <- renderText({
+  vCurrentPick <- rCurrentPick()
+  vTeamName <- paste0(toupper(vCurrentPick$coach[1]), "'S TEAM")
+  ui <- vTeamName
+  return(ui)
+})
+output$uiFieldLayout <- renderUI({
   
   vCurrentPick <- rCurrentPick()
+  vDraftTable <- rDraftTable
   
-  vRound <- vCurrentPick$round
-  vPick <- vCurrentPick$pick
+  selections <- vDraftTable %>%
+    filter(order_id == vCurrentPick$order_id[1]) %>%
+    filter(player_id != '') %>%
+    mutate(player_id = as.numeric(player_id)) %>%
+    left_join(vPlayers, by=c('player_id'))
   
-  ui <- valueBox(vPick, paste0('Round ',vRound), width=12, icon = icon("hashtag"))
+  pos <- list(
+    DEF = list(),
+    MID = list(),
+    RUC = list(),
+    FWD = list(),
+    BEN = list()
+  )
+  
+  if(nrow(selections)>0){
+    for(i in 1:nrow(selections)){
+      
+      vPlayerName <- selections$player_name[i]
+      vTeam <- selections$team[i]
+      vPos <- sub(' ','/', selections$pos[i])
+      vSelectedPos <- selections$position[i]
+      vBench <- FALSE
+      
+      posCount <- length(pos[[vSelectedPos]])
+      
+      if(posCount == vSettings$fieldStructure[[vSelectedPos]]){
+        vSelectedPos <- 'BEN'
+        vBench <- TRUE
+      }
+      
+      posCount <- length(pos[[vSelectedPos]]) + 1
+      pos[[vSelectedPos]][[posCount]] <- playerCell(vPlayerName, vTeam, vPos, vBench)
+    }
+  }
+  
+  # Row structure
+  n <- length(pos$DEF)
+  if(n == 3){
+    pos$DEF <- append(pos$DEF, list(br()), 1)
+  } else if(n %in% c(4,5)){
+    pos$DEF <- append(pos$DEF, list(br()), 2)
+  } else if(n == 6) {
+    pos$DEF <- append(pos$DEF, list(br()), 3)
+  }
+  
+  n <- length(pos$MID)
+  if(n == 4){
+    pos$MID <- append(pos$MID, list(br()), 2)
+  } else if(n %in% c(5,6)){
+    pos$MID <- append(pos$MID, list(br()), 3)
+  } else if(n == 7){
+    pos$MID <- append(pos$MID, list(br()), 5)
+    pos$MID <- append(pos$MID, list(br()), 2)
+  } else if(n >= 8){
+    pos$MID <- append(pos$MID, list(br()), 6)
+    pos$MID <- append(pos$MID, list(br()), 3)
+  } 
+  
+  n <- length(pos$FWD)
+  if(n %in% c(3,4)){
+    pos$FWD <- append(pos$FWD, list(br()), 2)
+  } else if(n >= 5) {
+    pos$FWD <- append(pos$FWD, list(br()), 3)
+  }
+  
+  ui <- div(
+         id="fieldLayout",
+         
+         div(
+           id="onFieldLayout",
+           div(
+             class="positionalLine",
+             div(),
+             div(pos$DEF)
+           ),
+           div(
+             class="positionalLine",
+             div(pos$MID)
+           ),
+           div(
+             class="positionalLine",
+             div(pos$RUC)
+           ),
+           div(
+             class="positionalLine",
+             div(pos$FWD),
+             div()
+           )
+         ),
+         div(
+           id="offFieldLayout",
+           div(
+             id='benchLine',
+             pos$BEN
+           )
+         )
+       )
+  
   return(ui)
 })
 output$uiPlayerPool <- renderUI({
@@ -88,6 +214,31 @@ output$uiPlayerPool <- renderUI({
     )
   )
   
+  return(ui)
+})
+output$uiPickCounter <- renderUI({
+  
+  vCurrentPick <- rCurrentPick()
+  
+  vRound <- vCurrentPick$round
+  vPick <- vCurrentPick$pick
+  
+  ui <- valueBox(vPick, paste0('Round ',vRound), width=12, icon = icon("hashtag"))
+  return(ui)
+})
+output$uiPickTimer <- renderUI({
+  invalidateLater(1000, session)
+  
+  if(vTimer > 0) vTimer <<- vTimer - 1
+  if(vTimer > 20) {
+    vColour <- 'green'
+  } else if (vTimer > 10){
+    vColour <- 'yellow'
+  } else {
+    vColour <- 'red'
+  }
+  
+  ui <- valueBox(vTimer, "Time Remaining", width=12, icon = icon('stopwatch'), color=vColour)
   return(ui)
 })
 output$uiDraftLog <- renderUI({
@@ -111,9 +262,3 @@ output$uiDraftLog <- renderUI({
   
   return(ui)
 })
-
-
-
-
-
-
