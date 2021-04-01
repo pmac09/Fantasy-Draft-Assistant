@@ -102,5 +102,8 @@ styles <- "
   float:right;
 }
 
+.errorMsg {
+  color: red;
+}
 
 "

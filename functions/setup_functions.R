@@ -13,7 +13,8 @@ create_draft <- function(vEmail, vDraftName){
     id = vID,
     email = vEmail,
     draft_name = vDraftName,
-    draft_code = vDraftCode
+    draft_code = vDraftCode,
+    date_time = format(Sys.time())
   )
   
   drafts <- bind_rows(drafts,newDraft)
@@ -35,15 +36,74 @@ delete_draft <- function(vDraftCode){
   
 }
 
+setup_draft <- function(vDraftCode, vSettings){
+  
+  # Save settings
+  save_settings(vDraftCode, vSettings)
+  
+  # Save Player List
+  vPath <- paste0('./www/player_lists/2021_sc_player_list.csv')
+  vPlayers <- read_csv(vPath) %>%
+    mutate(player_name = paste0(
+      substr(first_name,1,1), '.',
+      ifelse(is.na(str_extract(first_name, '.\\.')), '', str_extract(first_name, '.\\.')),
+      last_name)) %>%
+    select(player_id, player_name, team, pos, average, price) %>%
+    arrange(desc(price))
+  
+  save_players(vDraftCode, vPlayers)
+  
+  # Create draft table
+  vSettings <- get_settings(vDraftCode)
+  
+  vSize <- vSettings$leagueSize
+  vRounds <- sum(unlist(vSettings$fieldStructure))
+  vPicks <- vRounds * vSize
+  
+  if(vSettings$draftOrder == 'Snake'){
+    vOrderID <- rep(c(seq(1:vSize), rev(seq(1:vSize))), vRounds)[1:vPicks]
+  } else if(vSettings$draftOrder == 'Linear'){
+    vOrderID <- rep(seq(1:vSize), vRounds)[1:vPicks]
+  } else if(vSettings$draftOrder == 'Banzai'){
+    vOrderID <- c(seq(1:vSize),rev(seq(1:vSize)), rep(c(rev(seq(1:vSize)),seq(1:8)),vRounds))[1:vPicks]
+  } else if(vSettings$draftOrder == 'ASL Custom'){
+    vOrderID <- c(seq(1:vSize), rep(c(seq(1:vSize),rev(seq(1:vSize))), vRounds))[1:vPicks]
+  }
+
+  vCoaches <- vSettings$coaches[vOrderID]
+  
+  vDraftTable <- tibble( 
+    round = sort(rep(seq(1:vRounds), vSize)),
+    pick = seq(1:vPicks),
+    order_id = vOrderID,
+    coach = vCoaches,
+    player_id = '',
+    position = '',
+    time = ''
+  )
+  
+  save_draft_table(vDraftCode, vDraftTable)
+  
+}
+
 get_settings <- function(vDraftCode){
   path = paste0('data/',vDraftCode,'/settings')
   settings <- firebaseDownload(projectURL, path)
   return(settings)
 }
+save_settings <- function(vDraftCode, vSettings){
+  path = paste0('data/',vDraftCode,'/settings')
+  firebaseSave(projectURL, path, vSettings)
+}
+
 get_players <- function(vDraftCode){
   path = paste0('data/',vDraftCode,'/players')
   players <- as_tibble(firebaseDownload(projectURL, path))
   return(players)
+}
+save_players <- function(vDraftCode, vPlayers){
+  path = paste0('data/',vDraftCode,'/players')
+  firebaseSave(projectURL, path, vPlayers)
 }
 
 get_draft_table <- function(vDraftCode){
@@ -55,6 +115,7 @@ save_draft_table <- function(vDraftCode, vDraftTable){
   path = paste0('data/',vDraftCode,'/draft_table')
   firebaseSave(projectURL, path, vDraftTable)
 }
+
 
 current_pick <- function(vDraftTable){
   vCurrentPick <- vDraftTable %>%
@@ -116,4 +177,9 @@ get_player_pool <- function(vPlayers, vDraftTable, vTextSearch='', vTeamFilter='
   
   return(vPlayerPool)
   
+}
+
+validate_email <- function(vEmail){
+   vValid <- grepl("\\<[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\>", as.character(vEmail), ignore.case=TRUE)
+   return(vValid)
 }

@@ -16,12 +16,16 @@ fluidRow(
     h3('New Draft'),
     textInput(
       inputId= 'uiNewEmail',
-      label= 'Email:'
+      label= 'Email:',
     ),
+    div(class='errorMsg',textOutput('uiValidateNewEmail')),
+    br(),br(),
     textInput(
       inputId= 'uiNewDraftName',
       label= 'Draft Name:'
     ),
+    div(class='errorMsg',textOutput('uiValidateNewDraft')),
+    br(),br(),
     actionButton(
       inputId = 'uiNewDraft',
       label = 'Create Draft'
@@ -37,10 +41,14 @@ fluidRow(
       inputId= 'uiContinueEmail',
       label= 'Email:'
     ),
+    div(class='errorMsg',textOutput('uiValidateContinueEmail')),
+    br(),br(),
     textInput(
       inputId= 'uiDraftCode',
       label= 'Draft Code:'
     ),
+    div(class='errorMsg',textOutput('uiValidateDraftCode')),
+    br(),br(),
     actionButton(
       inputId = 'uiContinueDraft',
       label = 'Continue Draft'

@@ -26,7 +26,7 @@ fluidRow(
     
     #Field Structure
     fluidRow(
-      column(width=12,'Field Structure:'),
+      column(width=12,HTML('<b>Field Structure:</b>')),
       column(
         width=12,
         column(width=2,style='padding:0px;',
@@ -49,7 +49,7 @@ fluidRow(
       label = 'Draft Order:', 
       choices = list('Snake', 
                      'Linear', 
-                     'Bonzai',
+                     'Banzai',
                      'ASL Custom' ), 
       selected = 'ASL Custom'
     ),
@@ -73,6 +73,7 @@ fluidRow(
     width = 5,
     offset=1,
     h3('Draft Order'),
+    div(class='errorMsg', textOutput('uiValidateCoaches')),
     uiOutput('uiDraftOrder'),
     br(), br(), 
     actionButton(inputId= "uiCreateDraft", label = "Create Draft")

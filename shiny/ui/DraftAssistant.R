@@ -1,8 +1,8 @@
 fluidPage(
-  
+
   # CSS for player cells
   tags$head(tags$style(styles)),
-  
+
   # JQuery Script for the drafting buttons
   tags$head(
     tags$script(
@@ -18,16 +18,16 @@ fluidPage(
       });'
     )
   ),
-  
+
   fluidRow(
-    
+
     # LEFT #########################################################################
     column(
       width=6,
       h3(textOutput('uiTeamName')),
       uiOutput('uiFieldLayout')
     ),
-    
+
     # MIDDLE #######################################################################
     column(
       width=4,
@@ -59,6 +59,7 @@ fluidPage(
     column(
       width=2,
       style='padding:0px;',
+      #div(style='text-align:center; padding:2px;', HTML(textOutput('uiDraftCode'))),
       uiOutput('uiPickCounter'),
       uiOutput('uiPickTimer'),
       column(

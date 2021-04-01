@@ -1,23 +1,81 @@
 ################################################################################
 # DRAFT SETTINGS - SERVER
 
-vLeagueSize <- reactive({
-  return(input$uiLeagueSize)
+observeEvent(input$uiCreateDraft, {
+  
+  vValidNames <- TRUE
+  for (i in 1:input$uiLeagueSize){
+    if(input[[paste0('draftOrderPos',i)]] == ''){
+      vValidNames <- FALSE
+    }
+  }
+  
+  if(vValidNames){
+    rv$validateCoaches <- ''
+    
+    confirmSweetAlert(
+      session,
+      inputId = 'uiConfirmCreateDraft',
+      title = paste0('Confirm draft settings?'),
+      btn_labels = c("Cancel", "Create Draft")
+    )
+  } else {
+    rv$validateCoaches <- 'Please enter a name in each position.'
+  }
+
 })
-vFieldStructure <- reactive({
-  return(input$uiFieldStructure)
-})
-vDraftOrder <- reactive({
-  return(input$uiDraftOrder)
-})
-vTurnLength <- reactive({
-  return(input$uiTurnLength)
+observeEvent(input$uiConfirmCreateDraft, {
+  
+  if(input$uiConfirmCreateDraft){
+    
+    # Create draft
+    vEmail <- trimws(input$uiNewEmail)
+    vDraftName <- trimws(input$uiNewDraftName)
+    
+    vDraftCode <- create_draft(vEmail, vDraftName)
+    
+    # Create Settings
+    coaches <- c()
+    for (i in 1:input$uiLeagueSize){
+      coaches <- c(coaches, input[[paste0('draftOrderPos',i)]])
+    }
+    
+    vSettings <- list(
+      leagueSize = input$uiLeagueSize,
+      fieldStructure = list(DEF=input$uiStructureDEF,
+                            MID=input$uiStructureMID,
+                            RUC=input$uiStructureRUC,
+                            FWD=input$uiStructureFWD,
+                            BEN=input$uiStructureBEN),
+      draftOrder = input$uiDraftOrder,
+      turnLength = input$uiTurnLength,
+      coaches = coaches)
+    
+    # Complete Setup
+    setup_draft(vDraftCode, vSettings)
+    
+    # Confirm Setup
+    sendSweetAlert(
+      session = session,
+      title = "Draft Created!",
+      text = HTML(paste0('<b>Draft Code: ', vDraftCode, '</b><br/>', 'Your draft code is required to access your draft later.')),
+      type = "success",
+      html = TRUE
+    )
+    
+    # Assign reactiveVal
+    rDraftCode <- vDraftCode
+    
+    # Change Tabs
+    updateTabItems(session, 'sidebarTabs', 'tabDraft')
+  }
+  
 })
 
 output$uiDraftOrder <- renderUI({
   
   # Get how many teams have been selected
-  vLeagueSize <- vLeagueSize()
+  vLeagueSize <- input$uiLeagueSize
   
   # loop through to create boxes
   draftOrder <- list()
@@ -31,21 +89,7 @@ output$uiDraftOrder <- renderUI({
   
   return(draftOrder)
 })
-
-observeEvent(input$uiCreateDraft, {
-  
-  vEmail <- vEmail()
-  vDraftName <- vDraftName()
-  
-  vLeagueSize <- vLeagueSize()
-  vFieldStructure <- vFieldStructure()
-  vDraftOrder <- vDraftOrder()
-  vTurnLength <- vTurnLength()
-  
-  if(vEmail != '' & vDraftName != ''){
-    updateTabItems(session, 'sidebarTabs', 'tabSettings')
-  }
+output$uiValidateCoaches <- renderText({
+  ui <- rv$validateCoaches
+  return(ui)
 })
-
-
-

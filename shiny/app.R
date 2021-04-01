@@ -27,8 +27,8 @@ ui <- dashboardPage(
       collapsed = TRUE,
       sidebarMenu(
           id = "sidebarTabs",
-          #menuItem("Draft Setup",     tabName = "tabSetup",    icon = icon("cog")),
-          #menuItem("Draft Settings",  tabName = "tabSettings", icon = icon("cog")),
+          menuItem("Draft Setup",     tabName = "tabSetup",    icon = icon("cog")),
+          menuItem("Draft Settings",  tabName = "tabSettings", icon = icon("cog")),
           menuItem("Draft Assistant", tabName = "tabDraft",    icon = icon("list-ol")),
           menuItem("Draft Summary",   tabName = "tabSummary",  icon = icon("users"))
       )

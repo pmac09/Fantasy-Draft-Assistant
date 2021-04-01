@@ -18,6 +18,8 @@ vTimer <- vTimerReset
 ################################################################################
 ## REACTIVE FUNCTIONS
 
+#rDraftCode <- reactiveVal()
+
 rDraftTable <- get_draft_table(vDraftCode)
 makeReactiveBinding('rDraftTable')
 
@@ -40,14 +42,15 @@ observeEvent(rDraftSelection(), {
   
   vDraftSelection <- rDraftSelection()
   
-  # Selection Confirmation
-  confirmSweetAlert(
-    session,
-    inputId = 'uiConfirmDraft',
-    title = paste0('Draft ', vDraftSelection$playerName, ' as a ', vDraftSelection$pos,'?'),
-    btn_labels = c("Cancel", "Confirm")
-  )
-  
+  if(vDraftSelection$buttonType == 'btnDraft'){
+    # Selection Confirmation
+    confirmSweetAlert(
+      session,
+      inputId = 'uiConfirmDraft',
+      title = paste0('Draft ', vDraftSelection$playerName, ' as a ', vDraftSelection$pos,'?'),
+      btn_labels = c("Cancel", "Confirm")
+    )
+  }
 })
 observeEvent(input$uiConfirmDraft,{
   
@@ -214,6 +217,10 @@ output$uiPlayerPool <- renderUI({
     )
   )
   
+  return(ui)
+})
+output$uiDraftCode <- renderText({
+  ui <- paste0('<b>Draft Code: </b>vDraftCode')
   return(ui)
 })
 output$uiPickCounter <- renderUI({
