@@ -54,8 +54,6 @@ ui <- dashboardPage(
 
 server <- function(input, output, session) {
   
-  ##############################################################################
-  
   source('./server/DraftSetup_Server.R', local= TRUE)$value
   source('./server/DraftSettings_Server.R', local= TRUE)$value
   source('./server/DraftAssistant_Server.R', local= TRUE)$value

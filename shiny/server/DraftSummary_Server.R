@@ -24,7 +24,7 @@ rDraftName <- reactive({
   vDraftName <- vDrafts$draft_name[vDrafts$draft_code == vDraftCode]
   
   if(nchar(vDraftName)==0){
-    vDraftName <- 'Draft'
+    vDraftName <- 'Fantasy Draft Assistant'
   }
   
   return(vDraftName)
