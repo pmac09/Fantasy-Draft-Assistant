@@ -6,7 +6,7 @@ create_draft <- function(vEmail, vDraftName){
   
   drafts <- get_drafts()
   
-  vID <- nrow(drafts) + 1
+  vID <- max(drafts$id) + 1
   vDraftCode <- random_password(extended=FALSE)
   
   newDraft <- tibble(
