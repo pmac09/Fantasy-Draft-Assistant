@@ -10,11 +10,11 @@ library(fun)
 library(tidyverse)
 library(DT)
 
-source('../functions/secrets.R', local=TRUE)
-source('../functions/styles.R', local=TRUE)
-source('../functions/playerPool.R', local=TRUE)
-source('../functions/firebase_functions.R', local=TRUE)
-source('../functions/setup_functions.R', local=TRUE)
+source('./functions/secrets.R', local=TRUE)
+source('./functions/styles.R', local=TRUE)
+source('./functions/playerPool.R', local=TRUE)
+source('./functions/firebase_functions.R', local=TRUE)
+source('./functions/setup_functions.R', local=TRUE)
 
 ################################################################################
 # UI
