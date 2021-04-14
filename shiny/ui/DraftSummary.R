@@ -9,7 +9,7 @@ fluidPage(
         fluidRow(
           column(
             width=10,
-            dataTableOutput('uiDraftSummary')
+            DT::dataTableOutput('uiDraftSummary')
           ),
           column(
             width=2,
