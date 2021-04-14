@@ -8,6 +8,7 @@ library(shinyWidgets)
 library(fireData)
 library(fun)
 library(tidyverse)
+library(DT)
 
 source('../functions/secrets.R', local=TRUE)
 source('../functions/styles.R', local=TRUE)
@@ -52,10 +53,13 @@ ui <- dashboardPage(
 # SERVER
 
 server <- function(input, output, session) {
-    
+  
+  ##############################################################################
+  
   source('./server/DraftSetup_Server.R', local= TRUE)$value
   source('./server/DraftSettings_Server.R', local= TRUE)$value
   source('./server/DraftAssistant_Server.R', local= TRUE)$value
+  source('./server/DraftSummary_Server.R', local= TRUE)$value
   
 }
 

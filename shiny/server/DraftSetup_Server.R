@@ -2,6 +2,7 @@
 # DRAFT SETUP - SERVER
 
 rv <- reactiveValues(
+  timer = 0,
   validateNewEmail = '',
   validateNewDraft = '',
   validateContinueEmail = '',
@@ -59,8 +60,34 @@ observeEvent(input$uiContinueDraft, {
   
   # Proceed if all valid
   if(vEmailValid & vDraftCodeValid){
-    # Change page
-    updateTabItems(session, 'sidebarTabs', 'tabDraft')
+    
+    vValidDraft <- validate_draft(vEmail, vDraftCode)
+    
+    if(vValidDraft){
+      # Change page
+      updateTabItems(session, 'sidebarTabs', 'tabDraft')
+      
+      # Alert confirmation
+      sendSweetAlert(
+        session = session,
+        title = "Draft Loaded!",
+        type = "success"
+      )
+      
+      # Load draft code
+      rv$draftCode <- vDraftCode
+      
+    } else{
+      
+      # Alert fail
+      sendSweetAlert(
+        session = session,
+        title = "Draft not found!",
+        text= 'Check your details and try again.',
+        type = "error"
+      )
+      
+    }
   }
 })
 

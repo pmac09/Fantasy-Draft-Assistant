@@ -28,6 +28,9 @@ observeEvent(input$uiConfirmCreateDraft, {
   
   if(input$uiConfirmCreateDraft){
     
+    # Change Tabs
+    updateTabItems(session, 'sidebarTabs', 'tabDraft')
+    
     # Create draft
     vEmail <- trimws(input$uiNewEmail)
     vDraftName <- trimws(input$uiNewDraftName)
@@ -63,11 +66,9 @@ observeEvent(input$uiConfirmCreateDraft, {
       html = TRUE
     )
     
-    # Assign reactiveVal
-    rDraftCode <- vDraftCode
+    # Assign reactive Value
+    rv$draftCode <- vDraftCode
     
-    # Change Tabs
-    updateTabItems(session, 'sidebarTabs', 'tabDraft')
   }
   
 })

@@ -17,7 +17,7 @@ create_draft <- function(vEmail, vDraftName){
     date_time = format(Sys.time())
   )
   
-  drafts <- bind_rows(drafts,newDraft)
+  drafts <- bind_rows(newDraft,drafts)
   
   firebaseSave(projectURL, 'drafts', drafts)
   
@@ -34,6 +34,24 @@ delete_draft <- function(vDraftCode){
   
   return(drafts)
   
+}
+get_draft <- function(vDraftCode){
+  path = paste0('data/',vDraftCode)
+  draft <- firebaseDownload(projectURL, path)
+  return(draft)
+}
+validate_draft <- function(vEmail, vDraftCode){
+  
+  vDrafts <- get_drafts()
+  
+  n <- vDrafts %>%
+    filter(toupper(email) == toupper(vEmail)) %>%
+    filter(draft_code == vDraftCode) %>%
+    nrow()
+  
+  vValid <- n == 1
+  
+  return(vValid)
 }
 
 setup_draft <- function(vDraftCode, vSettings){
@@ -116,7 +134,6 @@ save_draft_table <- function(vDraftCode, vDraftTable){
   firebaseSave(projectURL, path, vDraftTable)
 }
 
-
 current_pick <- function(vDraftTable){
   vCurrentPick <- vDraftTable %>%
     filter(player_id == '') %>%
@@ -182,4 +199,37 @@ get_player_pool <- function(vPlayers, vDraftTable, vTextSearch='', vTeamFilter='
 validate_email <- function(vEmail){
    vValid <- grepl("\\<[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\>", as.character(vEmail), ignore.case=TRUE)
    return(vValid)
+}
+msglog <- function(msg){
+  verbose <- TRUE
+  if(verbose){
+    msg <- paste0(Sys.time(), ': ', msg)
+    print(msg)
+  }
+}
+
+
+get_draft_data <- function(vDraftTable, vPlayers){
+  
+  vDraftData <- as_tibble(vDraftTable) %>%
+    mutate(player_id = as.numeric(player_id)) %>%
+    left_join(vPlayers, by='player_id') %>%
+    select(round, pick, order_id, coach, player_id, player_name, team, pos, position, time) %>%
+    rename(position_drafted = position,
+           position = pos,
+          time_drafted = time)
+  
+  return(vDraftData)
+}
+get_draft_summary <- function(vDraftData){
+  
+  vDraftOrder <- unique(vDraftData$coach)
+  
+  vDraftSummary <-vDraftData %>%
+    select(round, coach, player_name) %>%
+    spread(key='coach', value='player_name')
+  
+  vDraftSummary <- vDraftSummary[,c('round', vDraftOrder)]
+  
+  return(vDraftSummary)
 }

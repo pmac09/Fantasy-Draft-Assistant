@@ -59,7 +59,7 @@ fluidPage(
     column(
       width=2,
       style='padding:0px;',
-      #div(style='text-align:center; padding:2px;', HTML(textOutput('uiDraftCode'))),
+      div(style='text-align:center; padding:2px;', textOutput('uiDraftCode')),
       uiOutput('uiPickCounter'),
       uiOutput('uiPickTimer'),
       column(

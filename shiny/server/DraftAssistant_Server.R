@@ -1,36 +1,54 @@
 ################################################################################
 ## DRAFT ASSISTANT - SERVER
-################################################################################
-
-vDraftCode <- 'ACM7LDxkZJfj'
-vPlayers <- get_players(vDraftCode)
-vSettings <- get_settings(vDraftCode)
-
-vTimerReset <- case_when(
-  vSettings$turnLength == '30 seconds' ~ 30,
-  vSettings$turnLength == '60 seconds' ~ 60,
-  vSettings$turnLength == '90 seconds' ~ 90,
-  vSettings$turnLength == '120 seconds' ~ 120,
-  TRUE ~ 0
-) + 1
-vTimer <- vTimerReset
 
 ################################################################################
 ## REACTIVE FUNCTIONS
 
-#rDraftCode <- reactiveVal()
-
-rDraftTable <- get_draft_table(vDraftCode)
-makeReactiveBinding('rDraftTable')
-
+rDraft <- reactive({
+  req(rv$draftCode)
+  vDraftCode <- rv$draftCode
+  vDraft <- get_draft(vDraftCode)
+  rv$draftTable <- vDraft$draft_table
+  return(vDraft)
+})
+rPlayers <- reactive({
+  vDraft <- rDraft()
+  vPlayers <- vDraft$players
+  return(vPlayers)
+})
+rSettings <- reactive({
+  vDraft <- rDraft()
+  vSettings <- vDraft$settings
+  return(vSettings)
+})
+rTimerReset <- reactive({
+  vSettings <- rSettings()
+  vTurnLength <- vSettings$turnLength
+  
+  vTimerReset <- case_when(
+    vTurnLength == '30 seconds' ~ 30,
+    vTurnLength == '60 seconds' ~ 60,
+    vTurnLength == '90 seconds' ~ 90,
+    vTurnLength == '120 seconds' ~ 120,
+    TRUE ~ 0
+  ) + 1
+  
+  rv$timer <- vTimerReset
+  
+  return(vTimerReset)
+})
 rCurrentPick <- reactive({
-  req(rDraftTable)
-  vCurrentPick <- current_pick(rDraftTable)
+  req(rv$draftTable)
+  vDraftTable <- rv$draftTable
+  vCurrentPick <- current_pick(vDraftTable)
   return(vCurrentPick)
 })
 rDraftSelection <- reactive({
   req(input$js.button_clicked)
+  
   vButtonID <- input$js.button_clicked
+  vPlayers <- rPlayers()
+  
   vDraftSelection <- draft_selection(vButtonID, vPlayers)
   return(vDraftSelection)
 })
@@ -57,13 +75,14 @@ observeEvent(input$uiConfirmDraft,{
   vConfirmDraft <- input$uiConfirmDraft
   if(vConfirmDraft){
   
-    vDraftSelection <- rDraftSelection()
+    vDraftCode <- rv$draftCode
+    vDraftTable <- rv$draftTable
     vCurrentPick <- rCurrentPick()
-    vDraftTable <- rDraftTable
+    vDraftSelection <- rDraftSelection()
+    vTimerReset <- rTimerReset()
   
     vDraftTable <- make_selection(vDraftTable, vDraftSelection, vCurrentPick$pick)
-    
-    rDraftTable <<- vDraftTable
+    rv$draftTable <- vDraftTable
     
     # Reset Filters
     updateTextInput(session, "uiTextSearch", value = '')
@@ -71,11 +90,14 @@ observeEvent(input$uiConfirmDraft,{
     updateSelectInput(session, "uiPosFilter", selected = 'ALL')
     
     # Reset Timer
-    vTimer <<- vTimerReset
+    rv$timer <- vTimerReset
   }
 })
-observeEvent(rDraftTable,{
-  vDraftTable <- rDraftTable
+observeEvent(rv$draftTable,{
+  
+  vDraftCode <- rv$draftCode
+  vDraftTable <- rv$draftTable
+  
   save_draft_table(vDraftCode, vDraftTable)
   
   vPicksRemaining <- nrow(vDraftTable %>% filter(player_id == ""))
@@ -88,8 +110,15 @@ observeEvent(rDraftTable,{
     
     updateTabItems(session, 'sidebarTabs', 'tabSummary')
   }
-  
-  
+
+})
+observe({
+  invalidateLater(1000, session)
+  isolate({
+    if(rv$timer > 0){
+      rv$timer<- rv$timer -1
+    } 
+  })
 })
 
 ################################################################################
@@ -104,7 +133,9 @@ output$uiTeamName <- renderText({
 output$uiFieldLayout <- renderUI({
   
   vCurrentPick <- rCurrentPick()
-  vDraftTable <- rDraftTable
+  vDraftTable <- rv$draftTable
+  vPlayers <- rPlayers()
+  vSettings <- rSettings()
   
   selections <- vDraftTable %>%
     filter(order_id == vCurrentPick$order_id[1]) %>%
@@ -208,7 +239,13 @@ output$uiFieldLayout <- renderUI({
 })
 output$uiPlayerPool <- renderUI({
   
-  vPlayerPool <- get_player_pool(vPlayers, rDraftTable, input$uiTextSearch, input$uiTeamFilter, input$uiPosFilter)
+  vDraftTable <- rv$draftTable
+  vPlayers <- rPlayers()
+  vTextSearch <- input$uiTextSearch
+  vTeamFilter <- input$uiTeamFilter
+  vPosFilter <- input$uiPosFilter
+  
+  vPlayerPool <- get_player_pool(vPlayers, vDraftTable, vTextSearch, vTeamFilter, vPosFilter)
   
   ui <- wellPanel(
     style = "overflow-y:scroll; height:650px; background:white;", 
@@ -220,7 +257,8 @@ output$uiPlayerPool <- renderUI({
   return(ui)
 })
 output$uiDraftCode <- renderText({
-  ui <- paste0('<b>Draft Code: </b>vDraftCode')
+  req(rv$draftCode)
+  ui <- paste0('Draft Code: ', rv$draftCode)
   return(ui)
 })
 output$uiPickCounter <- renderUI({
@@ -234,9 +272,8 @@ output$uiPickCounter <- renderUI({
   return(ui)
 })
 output$uiPickTimer <- renderUI({
-  invalidateLater(1000, session)
   
-  if(vTimer > 0) vTimer <<- vTimer - 1
+  vTimer <- rv$timer
   if(vTimer > 20) {
     vColour <- 'green'
   } else if (vTimer > 10){
@@ -250,7 +287,8 @@ output$uiPickTimer <- renderUI({
 })
 output$uiDraftLog <- renderUI({
   
-  vDraftTable <- rDraftTable
+  vDraftTable <- rv$draftTable
+  vPlayers <- rPlayers()
   
   vDraftLog <- vDraftTable %>%
     mutate(player_id = as.numeric(player_id)) %>%
@@ -262,7 +300,7 @@ output$uiDraftLog <- renderUI({
   
   ui <- wellPanel(
     style = "overflow-y:scroll; 
-                   height:460px; 
+                   height:435px; 
                    background:white;", 
     HTML(paste(vDraftLog$draft_log, br()))
   )

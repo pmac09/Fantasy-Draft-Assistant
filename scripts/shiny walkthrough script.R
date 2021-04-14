@@ -37,8 +37,9 @@ players <- read_csv(path) %>%
   select(player_id, player_name, team, pos, average, price) %>%
   arrange(desc(price))
 
-path = paste0('data/',vDraftCode,'/players')
-firebaseSave(projectURL, path, players)
+path = paste0('data/')
+path = paste0('drafts/')
+firebaseSave(projectURL, path, NULL)
 
 players <- firebaseDownload(projectURL, path)
 
