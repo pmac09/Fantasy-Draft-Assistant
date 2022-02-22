@@ -60,7 +60,7 @@ setup_draft <- function(vDraftCode, vSettings){
   save_settings(vDraftCode, vSettings)
   
   # Save Player List
-  vPath <- paste0('./www/player_lists/2021_sc_player_list.csv')
+  vPath <- paste0('./www/player_lists/2022_SC_Player_List.csv')
   vPlayers <- read_csv(vPath) %>%
     mutate(player_name = paste0(
       substr(first_name,1,1), '.',
