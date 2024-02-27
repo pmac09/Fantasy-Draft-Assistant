@@ -9,6 +9,7 @@ library(fireData)
 library(fun)
 library(tidyverse)
 library(DT)
+library(lubridate)
 
 source('./functions/secrets.R', local=TRUE)
 source('./functions/styles.R', local=TRUE)

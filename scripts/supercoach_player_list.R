@@ -71,4 +71,4 @@ player_data <- tibble(
   arrange(desc(price))
 
 # Export player list
-write.csv(player_data, './data/supercoach_player_list.csv', row.names = FALSE, na="")
+write.csv(player_data, paste0('./data/supercoach_player_list_',year,'.csv'), row.names = FALSE, na="")
