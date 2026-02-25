@@ -11,7 +11,7 @@ library(tidyverse)
 library(DT)
 library(lubridate)
 
-source('./functions/secrets.R', local=TRUE)
+#source('./functions/secrets.R', local=TRUE)
 source('./functions/styles.R', local=TRUE)
 source('./functions/playerPool.R', local=TRUE)
 source('./functions/firebase_functions.R', local=TRUE)

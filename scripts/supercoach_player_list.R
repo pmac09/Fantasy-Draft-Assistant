@@ -6,54 +6,78 @@ library(tidyverse)
 library(data.table)
 library(httr)
 
-################################################################################
-# FUNCTIONS
-get_sc_auth <- function(cid, tkn){
+
+library(cluster)
+library(httr)
+library(jsonlite)
+library(tidyverse)
+
+tkn <- '084cc4e6c4c58926b971491a424dc71bbd2a3cda'
+auth <- add_headers(Authorization = paste0('Bearer ', tkn))
+
+sc_download <- function(auth, url){
+  sc_data <- content(GET(url=url,config=auth))
+  return(sc_data)
+}
+sc_setup <- function(auth){
+  # Output Variable
+  sc <- list()
+  sc$auth <- auth
   
-  # POST request to get an access token
-  auth <- content(POST(
-    url = 'https://supercoach.heraldsun.com.au/2020/api/afl/classic/v1/access_token',
-    body = list(
-      grant_type = 'social',
-      client_id = cid,
-      client_secret = '',
-      service = 'auth0',
-      token = tkn
-    ),
-    encode = 'json'
-  ))
+  # URL components
+  sc$url$base    <- paste0('https://supercoach.heraldsun.com.au/', year(Sys.Date()), '/api/afl/')
+  sc$url$draft   <- paste0(sc$url$base, 'draft/v1/')
+  sc$url$classic <- paste0(sc$url$base, 'classic/v1/')
   
-  headers <- add_headers(
-    Authorization = paste0('Bearer ', auth$access_token)
-  )
+  # Generate API URLs
+  sc$url$settings <- paste0(sc$url$draft,'settings')
+  sc$url$me <- paste0(sc$url$draft,'me')
   
-  return(headers)
-}       # Generate SC auth access token
-get_data <- function(auth_headers, url){
-  data <- content(GET(
-    url = url,
-    config = auth_headers
-  ))
-  return(data)
-} # Get SC data
+  # Call API
+  sc$api$settings <- sc_download(sc$auth, sc$url$settings)
+  sc$api$me <- sc_download(sc$auth, sc$url$me)
+  
+  # Save common variables
+  sc$var$user_id <- sc$api$me$id
+  
+  # Generate API URLs
+  sc$url$user <- paste0(sc$url$draft,'users/', sc$var$user_id, '/stats')
+  
+  # Call API
+  sc$api$user <- sc_download(sc$auth, sc$url$user)
+  
+  # Save common variables
+  sc$var$season        <- as.numeric(sc$api$settings$content$season)
+  sc$var$league_id     <- sc$api$user$classic$leagues[[1]]$id
+  sc$var$current_round <- sc$api$settings$competition$current_round
+  sc$var$next_round    <- sc$api$settings$competition$next_round
+  
+  # Generate API URLs
+  sc$url$players <- paste0(sc$url$draft,'players-cf?embed=notes%2Codds%2Cplayer_stats%2Cpositions%2Cplayer_match_stats&round=')
+  sc$url$player  <- paste0(sc$url$draft,'players/%s?embed=notes,odds,player_stats,player_match_stats,positions,trades')
+  sc$url$league  <- paste0(sc$url$draft,'leagues/',sc$var$league_id,'/ladderAndFixtures?round=%s&scores=true')
+  sc$url$team    <- paste0(sc$url$draft,'userteams/%s/statsPlayers?round=%s')
+  
+  # Call API
+  #sc$api$league <- sc_download(sc$auth, sprintf(sc$url$league, sc$var$current_round))
+  
+  # Generate API URLs
+  sc$url$playerStatus <- paste0(sc$url$draft,'leagues/',sc$var$league_id,'/playersStatus')
+  sc$url$playerStats  <- paste0(sc$url$draft,'completeStatspack?player_id=')
+  
+  sc$url$aflFixture <- paste0(sc$url$draft,'real_fixture')
+  
+  sc$url$teamTrades       <- paste0(sc$url$draft,'leagues/',sc$var$league_id,'/teamtrades')
+  sc$url$trades           <- paste0(sc$url$draft,'leagues/',sc$var$league_id,'/trades')
+  sc$url$processedWaivers <- paste0(sc$url$draft,'leagues/',sc$var$league_id,'/processedWaivers')
+  sc$url$draftResult      <- paste0(sc$url$draft,'leagues/',sc$var$league_id,'/recap')
+  
+  return(sc)
+}
 
-################################################################################
-# SCRIPT
+sc <- sc_setup(auth)
 
-# Get supercoach auth variables
-source('./functions/secrets.R')
-
-# Generate auth_token
-auth_headers <- get_sc_auth(cid, tkn)
-
-# Get current year player list
-year <- year(Sys.Date())
-
-# Build HTTP url
-url <- paste0('https://supercoach.heraldsun.com.au/',year,'/api/afl/classic/v1/players-cf?embed=notes%2Codds%2Cplayer_stats%2Cpositions&round=0')
-
-# Get player data
-players_raw <- get_data(auth_headers, url)
+players_raw <- sc_download(sc$auth,paste0(sc$url$players,0))
 players_raw <- lapply(players_raw, unlist)
 players_raw <- bind_rows(lapply(players_raw, as.data.frame.list))
 
@@ -71,4 +95,5 @@ player_data <- tibble(
   arrange(desc(price))
 
 # Export player list
-write.csv(player_data, paste0('./data/supercoach_player_list_',year,'.csv'), row.names = FALSE, na="")
+write.csv(player_data, paste0('./data/supercoach_player_list_',year(Sys.Date()),'.csv'), row.names = FALSE, na="")
+write.csv(player_data, paste0('./shiny/www/player_lists/supercoach_player_list_',year(Sys.Date()),'.csv'), row.names = FALSE, na="")

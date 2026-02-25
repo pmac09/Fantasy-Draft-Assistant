@@ -1,3 +1,4 @@
+projectURL <- 'https://fantasy-banter-082017.firebaseio.com'
 
 firebaseDownload <- function(projectURL, path = NULL){
   data <- suppressWarnings(download(projectURL, paste0('Fantasy-Draft-Assistant/',path)))

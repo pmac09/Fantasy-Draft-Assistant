@@ -5,9 +5,7 @@ account: pmac
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3960818
-bundleId: 6944817
+bundleId: 11627845
 url: https://pmac.shinyapps.io/Fantasy_Draft_Assistant/
-when: 1678520788.75355
-lastSyncTime: 1678520788.75358
 asMultiple: FALSE
 asStatic: FALSE
